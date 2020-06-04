@@ -1,15 +1,13 @@
 # Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
 
 one:
-  rest_name: MyString
-  type: 
+  name: MyString
   description: MyString
   review: MyString
-  user: one
+  category: one
 
 two:
-  rest_name: MyString
-  type: 
+  name: MyString
   description: MyString
   review: MyString
-  user: two
+  category: two
