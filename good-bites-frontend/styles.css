@@ -1,4 +1,8 @@
 body {
+    font-family: 'HelveticaNeue-Light', 'Helvetica Neue sans-serif';
+    font-weight: 300;
+    line-height: 1.6em;
+    font-size: 1.3em;
     margin: 0;
     padding: 0;
 }
@@ -11,6 +15,7 @@ header {
 
 header h1 {
     color: lightgray;
+    font-size: 1.4em;
     padding: 10px;
     margin: 0;
 }
@@ -34,7 +39,7 @@ div.card {
 }
 
 p {
-    font-size: 1.5em;
+    font-size: 1.4em;
     color: black;
     font-family: Helvetica;
 }
