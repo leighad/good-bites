@@ -297,3 +297,555 @@ puma (4.3.5) lib/puma/server.rb:713:in `handle_request'
 puma (4.3.5) lib/puma/server.rb:472:in `process_client'
 puma (4.3.5) lib/puma/server.rb:328:in `block in run'
 puma (4.3.5) lib/puma/thread_pool.rb:134:in `block in spawn_thread'
+Started GET "/categories" for ::1 at 2020-06-04 16:19:55 -0700
+  [1m[35m (1.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by CategoriesController#index as HTML
+  [1m[36mCategory Load (0.6ms)[0m  [1m[34mSELECT "categories".* FROM "categories"[0m
+  ↳ app/controllers/categories_controller.rb:4:in `index'
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (0.76ms)
+Completed 200 OK in 20ms (Views: 11.7ms | ActiveRecord: 1.1ms | Allocations: 3396)
+
+
+  [1m[35m (1.4ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (1.3ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mCategory Create (1.4ms)[0m  [1m[32mINSERT INTO "categories" ("group", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["group", "Healthy"], ["created_at", "2020-06-04 23:34:28.909127"], ["updated_at", "2020-06-04 23:34:28.909127"]]
+  [1m[35m (0.2ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.2ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mCategory Create (0.2ms)[0m  [1m[32mINSERT INTO "categories" ("group", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["group", "Healthy"], ["created_at", "2020-06-04 23:34:28.923068"], ["updated_at", "2020-06-04 23:34:28.923068"]]
+  [1m[35m (0.2ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mCategory Create (0.1ms)[0m  [1m[32mINSERT INTO "categories" ("group", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["group", "Healthy"], ["created_at", "2020-06-04 23:34:28.926203"], ["updated_at", "2020-06-04 23:34:28.926203"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mCategory Create (0.2ms)[0m  [1m[32mINSERT INTO "categories" ("group", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["group", "Healthy"], ["created_at", "2020-06-04 23:34:28.927661"], ["updated_at", "2020-06-04 23:34:28.927661"]]
+  [1m[35m (0.3ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mCategory Create (0.1ms)[0m  [1m[32mINSERT INTO "categories" ("group", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["group", "Healthy"], ["created_at", "2020-06-04 23:34:28.932437"], ["updated_at", "2020-06-04 23:34:28.932437"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mCategory Create (0.2ms)[0m  [1m[32mINSERT INTO "categories" ("group", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["group", "Healthy"], ["created_at", "2020-06-04 23:34:28.934127"], ["updated_at", "2020-06-04 23:34:28.934127"]]
+  [1m[35m (0.2ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mCategory Create (0.1ms)[0m  [1m[32mINSERT INTO "categories" ("group", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["group", "Healthy"], ["created_at", "2020-06-04 23:34:28.937957"], ["updated_at", "2020-06-04 23:34:28.937957"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mCategory Create (0.1ms)[0m  [1m[32mINSERT INTO "categories" ("group", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["group", "Healthy"], ["created_at", "2020-06-04 23:34:28.939811"], ["updated_at", "2020-06-04 23:34:28.939811"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mCategory Create (0.1ms)[0m  [1m[32mINSERT INTO "categories" ("group", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["group", "Healthy"], ["created_at", "2020-06-04 23:34:28.941301"], ["updated_at", "2020-06-04 23:34:28.941301"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mCategory Create (0.2ms)[0m  [1m[32mINSERT INTO "categories" ("group", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["group", "Healthy"], ["created_at", "2020-06-04 23:34:29.038448"], ["updated_at", "2020-06-04 23:34:29.038448"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mCategory Create (0.2ms)[0m  [1m[32mINSERT INTO "categories" ("group", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["group", "Healthy"], ["created_at", "2020-06-04 23:34:29.040800"], ["updated_at", "2020-06-04 23:34:29.040800"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mCategory Create (0.1ms)[0m  [1m[32mINSERT INTO "categories" ("group", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["group", "Healthy"], ["created_at", "2020-06-04 23:34:29.043116"], ["updated_at", "2020-06-04 23:34:29.043116"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mCategory Create (0.2ms)[0m  [1m[32mINSERT INTO "categories" ("group", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["group", "Healthy"], ["created_at", "2020-06-04 23:34:29.044734"], ["updated_at", "2020-06-04 23:34:29.044734"]]
+  [1m[35m (0.2ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.2ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mCategory Create (0.3ms)[0m  [1m[32mINSERT INTO "categories" ("group", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["group", "Healthy"], ["created_at", "2020-06-04 23:34:29.047578"], ["updated_at", "2020-06-04 23:34:29.047578"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mCategory Create (0.2ms)[0m  [1m[32mINSERT INTO "categories" ("group", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["group", "Healthy"], ["created_at", "2020-06-04 23:34:29.050849"], ["updated_at", "2020-06-04 23:34:29.050849"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.9ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (1.4ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mCategory Create (1.3ms)[0m  [1m[32mINSERT INTO "categories" ("group", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["group", "Bar"], ["created_at", "2020-06-04 23:35:11.407691"], ["updated_at", "2020-06-04 23:35:11.407691"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mCategory Create (0.2ms)[0m  [1m[32mINSERT INTO "categories" ("group", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["group", "Bar"], ["created_at", "2020-06-04 23:35:11.419694"], ["updated_at", "2020-06-04 23:35:11.419694"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mCategory Create (0.1ms)[0m  [1m[32mINSERT INTO "categories" ("group", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["group", "Bar"], ["created_at", "2020-06-04 23:35:11.421581"], ["updated_at", "2020-06-04 23:35:11.421581"]]
+  [1m[35m (0.2ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (7.9ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mCategory Create (0.2ms)[0m  [1m[32mINSERT INTO "categories" ("group", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["group", "Bar"], ["created_at", "2020-06-04 23:35:11.426941"], ["updated_at", "2020-06-04 23:35:11.426941"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mCategory Create (0.2ms)[0m  [1m[32mINSERT INTO "categories" ("group", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["group", "Bar"], ["created_at", "2020-06-04 23:35:11.438498"], ["updated_at", "2020-06-04 23:35:11.438498"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mCategory Create (0.2ms)[0m  [1m[32mINSERT INTO "categories" ("group", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["group", "Bar"], ["created_at", "2020-06-04 23:35:11.440668"], ["updated_at", "2020-06-04 23:35:11.440668"]]
+  [1m[35m (0.2ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mCategory Create (0.1ms)[0m  [1m[32mINSERT INTO "categories" ("group", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["group", "Bar"], ["created_at", "2020-06-04 23:35:11.508542"], ["updated_at", "2020-06-04 23:35:11.508542"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mCategory Create (1.3ms)[0m  [1m[32mINSERT INTO "categories" ("group", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["group", "Bar"], ["created_at", "2020-06-04 23:35:11.510586"], ["updated_at", "2020-06-04 23:35:11.510586"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mCategory Create (0.2ms)[0m  [1m[32mINSERT INTO "categories" ("group", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["group", "Bar"], ["created_at", "2020-06-04 23:35:11.514010"], ["updated_at", "2020-06-04 23:35:11.514010"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mCategory Create (0.2ms)[0m  [1m[32mINSERT INTO "categories" ("group", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["group", "Bar"], ["created_at", "2020-06-04 23:35:11.516490"], ["updated_at", "2020-06-04 23:35:11.516490"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mCategory Create (0.2ms)[0m  [1m[32mINSERT INTO "categories" ("group", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["group", "Bar"], ["created_at", "2020-06-04 23:35:11.600734"], ["updated_at", "2020-06-04 23:35:11.600734"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.2ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mCategory Create (0.1ms)[0m  [1m[32mINSERT INTO "categories" ("group", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["group", "Bar"], ["created_at", "2020-06-04 23:35:11.602963"], ["updated_at", "2020-06-04 23:35:11.602963"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mCategory Create (0.1ms)[0m  [1m[32mINSERT INTO "categories" ("group", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["group", "Bar"], ["created_at", "2020-06-04 23:35:11.604760"], ["updated_at", "2020-06-04 23:35:11.604760"]]
+  [1m[35m (0.3ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mCategory Create (0.2ms)[0m  [1m[32mINSERT INTO "categories" ("group", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["group", "Bar"], ["created_at", "2020-06-04 23:35:11.683678"], ["updated_at", "2020-06-04 23:35:11.683678"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mCategory Create (0.2ms)[0m  [1m[32mINSERT INTO "categories" ("group", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["group", "Bar"], ["created_at", "2020-06-04 23:35:11.686487"], ["updated_at", "2020-06-04 23:35:11.686487"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (1.4ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.9ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.3ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mCategory Create (1.7ms)[0m  [1m[32mINSERT INTO "categories" ("group", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["group", "Caribbean"], ["created_at", "2020-06-04 23:36:10.416408"], ["updated_at", "2020-06-04 23:36:10.416408"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mCategory Create (0.2ms)[0m  [1m[32mINSERT INTO "categories" ("group", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["group", "Caribbean"], ["created_at", "2020-06-04 23:36:10.442460"], ["updated_at", "2020-06-04 23:36:10.442460"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mCategory Create (0.1ms)[0m  [1m[32mINSERT INTO "categories" ("group", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["group", "Caribbean"], ["created_at", "2020-06-04 23:36:10.444027"], ["updated_at", "2020-06-04 23:36:10.444027"]]
+  [1m[35m (0.2ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mCategory Create (0.2ms)[0m  [1m[32mINSERT INTO "categories" ("group", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["group", "Caribbean"], ["created_at", "2020-06-04 23:36:10.448286"], ["updated_at", "2020-06-04 23:36:10.448286"]]
+  [1m[35m (0.3ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mCategory Create (0.2ms)[0m  [1m[32mINSERT INTO "categories" ("group", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["group", "Caribbean"], ["created_at", "2020-06-04 23:36:10.451203"], ["updated_at", "2020-06-04 23:36:10.451203"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mCategory Create (0.2ms)[0m  [1m[32mINSERT INTO "categories" ("group", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["group", "Caribbean"], ["created_at", "2020-06-04 23:36:10.454541"], ["updated_at", "2020-06-04 23:36:10.454541"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mCategory Create (0.1ms)[0m  [1m[32mINSERT INTO "categories" ("group", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["group", "Caribbean"], ["created_at", "2020-06-04 23:36:10.456970"], ["updated_at", "2020-06-04 23:36:10.456970"]]
+  [1m[35m (0.6ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mCategory Create (0.2ms)[0m  [1m[32mINSERT INTO "categories" ("group", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["group", "Caribbean"], ["created_at", "2020-06-04 23:36:10.459721"], ["updated_at", "2020-06-04 23:36:10.459721"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mCategory Create (0.2ms)[0m  [1m[32mINSERT INTO "categories" ("group", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["group", "Caribbean"], ["created_at", "2020-06-04 23:36:10.462207"], ["updated_at", "2020-06-04 23:36:10.462207"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mCategory Create (0.2ms)[0m  [1m[32mINSERT INTO "categories" ("group", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["group", "Caribbean"], ["created_at", "2020-06-04 23:36:10.465781"], ["updated_at", "2020-06-04 23:36:10.465781"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mCategory Create (0.1ms)[0m  [1m[32mINSERT INTO "categories" ("group", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["group", "Caribbean"], ["created_at", "2020-06-04 23:36:10.468650"], ["updated_at", "2020-06-04 23:36:10.468650"]]
+  [1m[35m (0.2ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mCategory Create (0.2ms)[0m  [1m[32mINSERT INTO "categories" ("group", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["group", "Caribbean"], ["created_at", "2020-06-04 23:36:10.587696"], ["updated_at", "2020-06-04 23:36:10.587696"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mCategory Create (0.1ms)[0m  [1m[32mINSERT INTO "categories" ("group", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["group", "Caribbean"], ["created_at", "2020-06-04 23:36:10.589601"], ["updated_at", "2020-06-04 23:36:10.589601"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mCategory Create (0.2ms)[0m  [1m[32mINSERT INTO "categories" ("group", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["group", "Caribbean"], ["created_at", "2020-06-04 23:36:10.591077"], ["updated_at", "2020-06-04 23:36:10.591077"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mCategory Create (0.1ms)[0m  [1m[32mINSERT INTO "categories" ("group", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["group", "Caribbean"], ["created_at", "2020-06-04 23:36:10.612562"], ["updated_at", "2020-06-04 23:36:10.612562"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.4ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.8ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mCategory Create (0.6ms)[0m  [1m[32mINSERT INTO "categories" ("group", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["group", "Juice & Smoothies"], ["created_at", "2020-06-04 23:37:44.333535"], ["updated_at", "2020-06-04 23:37:44.333535"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (3.9ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (1.3ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mCategory Create (0.6ms)[0m  [1m[32mINSERT INTO "categories" ("group", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["group", "African"], ["created_at", "2020-06-04 23:40:04.896750"], ["updated_at", "2020-06-04 23:40:04.896750"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mCategory Create (0.2ms)[0m  [1m[32mINSERT INTO "categories" ("group", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["group", "Healthy"], ["created_at", "2020-06-04 23:40:44.077167"], ["updated_at", "2020-06-04 23:40:44.077167"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mCategory Create (0.1ms)[0m  [1m[32mINSERT INTO "categories" ("group", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["group", "Healthy"], ["created_at", "2020-06-04 23:40:44.079555"], ["updated_at", "2020-06-04 23:40:44.079555"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mCategory Create (0.1ms)[0m  [1m[32mINSERT INTO "categories" ("group", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["group", "Healthy"], ["created_at", "2020-06-04 23:40:44.081122"], ["updated_at", "2020-06-04 23:40:44.081122"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mCategory Create (0.2ms)[0m  [1m[32mINSERT INTO "categories" ("group", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["group", "Healthy"], ["created_at", "2020-06-04 23:40:44.142118"], ["updated_at", "2020-06-04 23:40:44.142118"]]
+  [1m[35m (0.2ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mCategory Create (0.2ms)[0m  [1m[32mINSERT INTO "categories" ("group", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["group", "Healthy"], ["created_at", "2020-06-04 23:40:44.146426"], ["updated_at", "2020-06-04 23:40:44.146426"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (3.7ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mCategory Create (0.2ms)[0m  [1m[32mINSERT INTO "categories" ("group", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["group", "Healthy"], ["created_at", "2020-06-04 23:40:44.148409"], ["updated_at", "2020-06-04 23:40:44.148409"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mCategory Create (0.3ms)[0m  [1m[32mINSERT INTO "categories" ("group", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["group", "Healthy"], ["created_at", "2020-06-04 23:40:44.153823"], ["updated_at", "2020-06-04 23:40:44.153823"]]
+  [1m[35m (0.4ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mCategory Create (0.2ms)[0m  [1m[32mINSERT INTO "categories" ("group", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["group", "Healthy"], ["created_at", "2020-06-04 23:40:44.222244"], ["updated_at", "2020-06-04 23:40:44.222244"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mCategory Create (0.1ms)[0m  [1m[32mINSERT INTO "categories" ("group", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["group", "Healthy"], ["created_at", "2020-06-04 23:40:44.224525"], ["updated_at", "2020-06-04 23:40:44.224525"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mCategory Create (0.2ms)[0m  [1m[32mINSERT INTO "categories" ("group", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["group", "Healthy"], ["created_at", "2020-06-04 23:40:44.226301"], ["updated_at", "2020-06-04 23:40:44.226301"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mCategory Create (0.1ms)[0m  [1m[32mINSERT INTO "categories" ("group", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["group", "Healthy"], ["created_at", "2020-06-04 23:40:44.228949"], ["updated_at", "2020-06-04 23:40:44.228949"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mCategory Create (0.3ms)[0m  [1m[32mINSERT INTO "categories" ("group", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["group", "Healthy"], ["created_at", "2020-06-04 23:40:44.230426"], ["updated_at", "2020-06-04 23:40:44.230426"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mCategory Create (0.2ms)[0m  [1m[32mINSERT INTO "categories" ("group", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["group", "Healthy"], ["created_at", "2020-06-04 23:40:44.234115"], ["updated_at", "2020-06-04 23:40:44.234115"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mCategory Create (0.1ms)[0m  [1m[32mINSERT INTO "categories" ("group", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["group", "Healthy"], ["created_at", "2020-06-04 23:40:44.236265"], ["updated_at", "2020-06-04 23:40:44.236265"]]
+  [1m[35m (0.4ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.2ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mCategory Create (0.2ms)[0m  [1m[32mINSERT INTO "categories" ("group", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["group", "Healthy"], ["created_at", "2020-06-04 23:40:44.312499"], ["updated_at", "2020-06-04 23:40:44.312499"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mCategory Create (0.2ms)[0m  [1m[32mINSERT INTO "categories" ("group", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["group", "Burgers"], ["created_at", "2020-06-04 23:41:54.380889"], ["updated_at", "2020-06-04 23:41:54.380889"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mCategory Create (0.1ms)[0m  [1m[32mINSERT INTO "categories" ("group", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["group", "Burgers"], ["created_at", "2020-06-04 23:41:54.387239"], ["updated_at", "2020-06-04 23:41:54.387239"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mCategory Create (0.1ms)[0m  [1m[32mINSERT INTO "categories" ("group", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["group", "Burgers"], ["created_at", "2020-06-04 23:41:54.388498"], ["updated_at", "2020-06-04 23:41:54.388498"]]
+  [1m[35m (0.2ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mCategory Create (0.2ms)[0m  [1m[32mINSERT INTO "categories" ("group", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["group", "Burgers"], ["created_at", "2020-06-04 23:41:54.503489"], ["updated_at", "2020-06-04 23:41:54.503489"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.2ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mCategory Create (0.2ms)[0m  [1m[32mINSERT INTO "categories" ("group", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["group", "Burgers"], ["created_at", "2020-06-04 23:41:54.506038"], ["updated_at", "2020-06-04 23:41:54.506038"]]
+  [1m[35m (0.2ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mCategory Create (0.2ms)[0m  [1m[32mINSERT INTO "categories" ("group", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["group", "Burgers"], ["created_at", "2020-06-04 23:41:54.509606"], ["updated_at", "2020-06-04 23:41:54.509606"]]
+  [1m[35m (0.2ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mCategory Create (2.5ms)[0m  [1m[32mINSERT INTO "categories" ("group", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["group", "Burgers"], ["created_at", "2020-06-04 23:41:54.513677"], ["updated_at", "2020-06-04 23:41:54.513677"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mCategory Create (0.2ms)[0m  [1m[32mINSERT INTO "categories" ("group", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["group", "Burgers"], ["created_at", "2020-06-04 23:41:54.520729"], ["updated_at", "2020-06-04 23:41:54.520729"]]
+  [1m[35m (0.2ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mCategory Create (0.2ms)[0m  [1m[32mINSERT INTO "categories" ("group", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["group", "Burgers"], ["created_at", "2020-06-04 23:41:54.677771"], ["updated_at", "2020-06-04 23:41:54.677771"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mCategory Create (0.1ms)[0m  [1m[32mINSERT INTO "categories" ("group", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["group", "Burgers"], ["created_at", "2020-06-04 23:41:54.680403"], ["updated_at", "2020-06-04 23:41:54.680403"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mCategory Create (0.2ms)[0m  [1m[32mINSERT INTO "categories" ("group", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["group", "Burgers"], ["created_at", "2020-06-04 23:41:54.714392"], ["updated_at", "2020-06-04 23:41:54.714392"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.4ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mCategory Create (0.2ms)[0m  [1m[32mINSERT INTO "categories" ("group", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["group", "Burgers"], ["created_at", "2020-06-04 23:41:54.716645"], ["updated_at", "2020-06-04 23:41:54.716645"]]
+  [1m[35m (0.2ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mCategory Create (0.2ms)[0m  [1m[32mINSERT INTO "categories" ("group", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["group", "Burgers"], ["created_at", "2020-06-04 23:41:54.917135"], ["updated_at", "2020-06-04 23:41:54.917135"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mCategory Create (0.2ms)[0m  [1m[32mINSERT INTO "categories" ("group", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["group", "Burgers"], ["created_at", "2020-06-04 23:41:54.919681"], ["updated_at", "2020-06-04 23:41:54.919681"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mCategory Create (0.1ms)[0m  [1m[32mINSERT INTO "categories" ("group", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["group", "Burgers"], ["created_at", "2020-06-04 23:41:54.921340"], ["updated_at", "2020-06-04 23:41:54.921340"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (1.8ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (1.5ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mCategory Create (2.0ms)[0m  [1m[32mINSERT INTO "categories" ("group", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["group", "Healthy"], ["created_at", "2020-06-05 00:01:09.337734"], ["updated_at", "2020-06-05 00:01:09.337734"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mCategory Create (0.2ms)[0m  [1m[32mINSERT INTO "categories" ("group", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["group", "Healthy"], ["created_at", "2020-06-05 00:01:09.349704"], ["updated_at", "2020-06-05 00:01:09.349704"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mCategory Create (0.1ms)[0m  [1m[32mINSERT INTO "categories" ("group", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["group", "Healthy"], ["created_at", "2020-06-05 00:01:09.351385"], ["updated_at", "2020-06-05 00:01:09.351385"]]
+  [1m[35m (0.2ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mCategory Create (0.2ms)[0m  [1m[32mINSERT INTO "categories" ("group", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["group", "Healthy"], ["created_at", "2020-06-05 00:01:09.407338"], ["updated_at", "2020-06-05 00:01:09.407338"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mCategory Create (0.1ms)[0m  [1m[32mINSERT INTO "categories" ("group", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["group", "Healthy"], ["created_at", "2020-06-05 00:01:09.409431"], ["updated_at", "2020-06-05 00:01:09.409431"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mCategory Create (0.1ms)[0m  [1m[32mINSERT INTO "categories" ("group", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["group", "Healthy"], ["created_at", "2020-06-05 00:01:09.411204"], ["updated_at", "2020-06-05 00:01:09.411204"]]
+  [1m[35m (0.2ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mCategory Create (0.3ms)[0m  [1m[32mINSERT INTO "categories" ("group", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["group", "Healthy"], ["created_at", "2020-06-05 00:01:09.538052"], ["updated_at", "2020-06-05 00:01:09.538052"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mCategory Create (0.2ms)[0m  [1m[32mINSERT INTO "categories" ("group", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["group", "Healthy"], ["created_at", "2020-06-05 00:01:09.540881"], ["updated_at", "2020-06-05 00:01:09.540881"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mCategory Create (0.1ms)[0m  [1m[32mINSERT INTO "categories" ("group", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["group", "Healthy"], ["created_at", "2020-06-05 00:01:09.543169"], ["updated_at", "2020-06-05 00:01:09.543169"]]
+  [1m[35m (0.2ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.2ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mCategory Create (0.2ms)[0m  [1m[32mINSERT INTO "categories" ("group", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["group", "Healthy"], ["created_at", "2020-06-05 00:01:09.685395"], ["updated_at", "2020-06-05 00:01:09.685395"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mCategory Create (0.2ms)[0m  [1m[32mINSERT INTO "categories" ("group", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["group", "Healthy"], ["created_at", "2020-06-05 00:01:09.687929"], ["updated_at", "2020-06-05 00:01:09.687929"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mCategory Create (0.2ms)[0m  [1m[32mINSERT INTO "categories" ("group", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["group", "Healthy"], ["created_at", "2020-06-05 00:01:09.689994"], ["updated_at", "2020-06-05 00:01:09.689994"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mCategory Create (0.2ms)[0m  [1m[32mINSERT INTO "categories" ("group", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["group", "Healthy"], ["created_at", "2020-06-05 00:01:09.873034"], ["updated_at", "2020-06-05 00:01:09.873034"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.2ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mCategory Create (0.1ms)[0m  [1m[32mINSERT INTO "categories" ("group", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["group", "Healthy"], ["created_at", "2020-06-05 00:01:09.876249"], ["updated_at", "2020-06-05 00:01:09.876249"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mCategory Create (0.1ms)[0m  [1m[32mINSERT INTO "categories" ("group", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["group", "Healthy"], ["created_at", "2020-06-05 00:01:09.879034"], ["updated_at", "2020-06-05 00:01:09.879034"]]
+  [1m[35m (0.9ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mCategory Create (0.2ms)[0m  [1m[32mINSERT INTO "categories" ("group", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["group", "Argentinian"], ["created_at", "2020-06-05 00:01:29.755973"], ["updated_at", "2020-06-05 00:01:29.755973"]]
+  [1m[35m (0.2ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.2ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mCategory Create (0.2ms)[0m  [1m[32mINSERT INTO "categories" ("group", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["group", "Argentinian"], ["created_at", "2020-06-05 00:01:29.770016"], ["updated_at", "2020-06-05 00:01:29.770016"]]
+  [1m[35m (0.4ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mCategory Create (0.1ms)[0m  [1m[32mINSERT INTO "categories" ("group", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["group", "Argentinian"], ["created_at", "2020-06-05 00:01:29.772881"], ["updated_at", "2020-06-05 00:01:29.772881"]]
+  [1m[35m (0.3ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mCategory Create (0.2ms)[0m  [1m[32mINSERT INTO "categories" ("group", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["group", "Argentinian"], ["created_at", "2020-06-05 00:01:29.926238"], ["updated_at", "2020-06-05 00:01:29.926238"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.2ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mCategory Create (0.2ms)[0m  [1m[32mINSERT INTO "categories" ("group", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["group", "Argentinian"], ["created_at", "2020-06-05 00:01:29.928803"], ["updated_at", "2020-06-05 00:01:29.928803"]]
+  [1m[35m (0.2ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mCategory Create (0.2ms)[0m  [1m[32mINSERT INTO "categories" ("group", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["group", "Argentinian"], ["created_at", "2020-06-05 00:01:29.931702"], ["updated_at", "2020-06-05 00:01:29.931702"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mCategory Create (0.2ms)[0m  [1m[32mINSERT INTO "categories" ("group", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["group", "Argentinian"], ["created_at", "2020-06-05 00:01:29.934082"], ["updated_at", "2020-06-05 00:01:29.934082"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mCategory Create (0.2ms)[0m  [1m[32mINSERT INTO "categories" ("group", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["group", "Argentinian"], ["created_at", "2020-06-05 00:01:29.936377"], ["updated_at", "2020-06-05 00:01:29.936377"]]
+  [1m[35m (0.2ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mCategory Create (0.2ms)[0m  [1m[32mINSERT INTO "categories" ("group", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["group", "Argentinian"], ["created_at", "2020-06-05 00:01:30.128100"], ["updated_at", "2020-06-05 00:01:30.128100"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mCategory Create (0.2ms)[0m  [1m[32mINSERT INTO "categories" ("group", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["group", "Argentinian"], ["created_at", "2020-06-05 00:01:30.130242"], ["updated_at", "2020-06-05 00:01:30.130242"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mCategory Create (0.4ms)[0m  [1m[32mINSERT INTO "categories" ("group", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["group", "Argentinian"], ["created_at", "2020-06-05 00:01:30.132361"], ["updated_at", "2020-06-05 00:01:30.132361"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mCategory Create (0.2ms)[0m  [1m[32mINSERT INTO "categories" ("group", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["group", "Argentinian"], ["created_at", "2020-06-05 00:01:30.148588"], ["updated_at", "2020-06-05 00:01:30.148588"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mCategory Create (0.1ms)[0m  [1m[32mINSERT INTO "categories" ("group", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["group", "Argentinian"], ["created_at", "2020-06-05 00:01:30.150537"], ["updated_at", "2020-06-05 00:01:30.150537"]]
+  [1m[35m (0.2ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mCategory Create (0.2ms)[0m  [1m[32mINSERT INTO "categories" ("group", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["group", "Argentinian"], ["created_at", "2020-06-05 00:01:30.311115"], ["updated_at", "2020-06-05 00:01:30.311115"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mCategory Create (0.2ms)[0m  [1m[32mINSERT INTO "categories" ("group", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["group", "Argentinian"], ["created_at", "2020-06-05 00:01:30.313410"], ["updated_at", "2020-06-05 00:01:30.313410"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.9ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (1.4ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mCategory Create (1.5ms)[0m  [1m[32mINSERT INTO "categories" ("group", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["group", "Japanese"], ["created_at", "2020-06-05 00:05:24.459377"], ["updated_at", "2020-06-05 00:05:24.459377"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mCategory Create (0.2ms)[0m  [1m[32mINSERT INTO "categories" ("group", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["group", "Chinese"], ["created_at", "2020-06-05 00:06:27.929160"], ["updated_at", "2020-06-05 00:06:27.929160"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (1.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (1.3ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mCategory Create (1.5ms)[0m  [1m[32mINSERT INTO "categories" ("group", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["group", "Asian"], ["created_at", "2020-06-05 00:08:57.538703"], ["updated_at", "2020-06-05 00:08:57.538703"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mCategory Create (0.2ms)[0m  [1m[32mINSERT INTO "categories" ("group", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["group", "Burgers"], ["created_at", "2020-06-05 00:08:57.552656"], ["updated_at", "2020-06-05 00:08:57.552656"]]
+  [1m[35m (0.2ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mCategory Create (0.2ms)[0m  [1m[32mINSERT INTO "categories" ("group", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["group", "Burgers"], ["created_at", "2020-06-05 00:08:57.555062"], ["updated_at", "2020-06-05 00:08:57.555062"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mCategory Create (0.8ms)[0m  [1m[32mINSERT INTO "categories" ("group", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["group", "Sushi"], ["created_at", "2020-06-05 00:08:57.591615"], ["updated_at", "2020-06-05 00:08:57.591615"]]
+  [1m[35m (0.2ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.3ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mCategory Create (0.2ms)[0m  [1m[32mINSERT INTO "categories" ("group", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["group", "Healthy"], ["created_at", "2020-06-05 00:08:57.596458"], ["updated_at", "2020-06-05 00:08:57.596458"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mCategory Create (0.1ms)[0m  [1m[32mINSERT INTO "categories" ("group", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["group", "American (New)"], ["created_at", "2020-06-05 00:08:57.602161"], ["updated_at", "2020-06-05 00:08:57.602161"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mCategory Create (0.1ms)[0m  [1m[32mINSERT INTO "categories" ("group", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["group", "European"], ["created_at", "2020-06-05 00:08:57.604514"], ["updated_at", "2020-06-05 00:08:57.604514"]]
+  [1m[35m (0.2ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.3ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mCategory Create (0.2ms)[0m  [1m[32mINSERT INTO "categories" ("group", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["group", "Vegan"], ["created_at", "2020-06-05 00:08:57.702564"], ["updated_at", "2020-06-05 00:08:57.702564"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mCategory Create (0.1ms)[0m  [1m[32mINSERT INTO "categories" ("group", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["group", "Sushi"], ["created_at", "2020-06-05 00:08:57.705055"], ["updated_at", "2020-06-05 00:08:57.705055"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mCategory Create (0.1ms)[0m  [1m[32mINSERT INTO "categories" ("group", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["group", "Korean"], ["created_at", "2020-06-05 00:08:57.706799"], ["updated_at", "2020-06-05 00:08:57.706799"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mCategory Create (0.2ms)[0m  [1m[32mINSERT INTO "categories" ("group", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["group", "Mexican"], ["created_at", "2020-06-05 00:09:44.790060"], ["updated_at", "2020-06-05 00:09:44.790060"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mCategory Create (0.1ms)[0m  [1m[32mINSERT INTO "categories" ("group", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["group", "Mexican"], ["created_at", "2020-06-05 00:09:44.793149"], ["updated_at", "2020-06-05 00:09:44.793149"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mCategory Create (0.1ms)[0m  [1m[32mINSERT INTO "categories" ("group", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["group", "Italian"], ["created_at", "2020-06-05 00:09:44.794637"], ["updated_at", "2020-06-05 00:09:44.794637"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mCategory Create (0.1ms)[0m  [1m[32mINSERT INTO "categories" ("group", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["group", "Japanese"], ["created_at", "2020-06-05 00:09:44.795993"], ["updated_at", "2020-06-05 00:09:44.795993"]]
+  [1m[35m (0.2ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mCategory Create (0.3ms)[0m  [1m[32mINSERT INTO "categories" ("group", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["group", "Desserts"], ["created_at", "2020-06-05 00:09:44.878176"], ["updated_at", "2020-06-05 00:09:44.878176"]]
+  [1m[35m (1.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mCategory Create (0.2ms)[0m  [1m[32mINSERT INTO "categories" ("group", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["group", "European"], ["created_at", "2020-06-05 00:09:44.882515"], ["updated_at", "2020-06-05 00:09:44.882515"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mCategory Create (0.1ms)[0m  [1m[32mINSERT INTO "categories" ("group", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["group", "Sushi"], ["created_at", "2020-06-05 00:09:44.884900"], ["updated_at", "2020-06-05 00:09:44.884900"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mCategory Create (0.2ms)[0m  [1m[32mINSERT INTO "categories" ("group", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["group", "Comfort Food"], ["created_at", "2020-06-05 00:09:44.886901"], ["updated_at", "2020-06-05 00:09:44.886901"]]
+  [1m[35m (0.2ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mCategory Create (0.2ms)[0m  [1m[32mINSERT INTO "categories" ("group", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["group", "Argentinian"], ["created_at", "2020-06-05 00:09:44.989620"], ["updated_at", "2020-06-05 00:09:44.989620"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mCategory Create (0.2ms)[0m  [1m[32mINSERT INTO "categories" ("group", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["group", "Brazilian"], ["created_at", "2020-06-05 00:09:44.992639"], ["updated_at", "2020-06-05 00:09:44.992639"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mCategory Create (0.2ms)[0m  [1m[32mINSERT INTO "categories" ("group", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["group", "European"], ["created_at", "2020-06-05 00:09:44.995187"], ["updated_at", "2020-06-05 00:09:44.995187"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mCategory Create (0.2ms)[0m  [1m[32mINSERT INTO "categories" ("group", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["group", "African"], ["created_at", "2020-06-05 00:09:44.997410"], ["updated_at", "2020-06-05 00:09:44.997410"]]
+  [1m[35m (0.4ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mCategory Create (0.1ms)[0m  [1m[32mINSERT INTO "categories" ("group", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["group", "European"], ["created_at", "2020-06-05 00:09:45.106292"], ["updated_at", "2020-06-05 00:09:45.106292"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mCategory Create (0.1ms)[0m  [1m[32mINSERT INTO "categories" ("group", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["group", "Vietnamese"], ["created_at", "2020-06-05 00:09:45.107745"], ["updated_at", "2020-06-05 00:09:45.107745"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.2ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mCategory Create (0.2ms)[0m  [1m[32mINSERT INTO "categories" ("group", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["group", "Vegetarian"], ["created_at", "2020-06-05 00:09:45.109764"], ["updated_at", "2020-06-05 00:09:45.109764"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mCategory Create (0.4ms)[0m  [1m[32mINSERT INTO "categories" ("group", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["group", "Asian"], ["created_at", "2020-06-05 00:09:45.112449"], ["updated_at", "2020-06-05 00:09:45.112449"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.2ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mCategory Create (0.2ms)[0m  [1m[32mINSERT INTO "categories" ("group", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["group", "Ice Cream"], ["created_at", "2020-06-05 00:09:45.114920"], ["updated_at", "2020-06-05 00:09:45.114920"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.2ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mCategory Create (0.1ms)[0m  [1m[32mINSERT INTO "categories" ("group", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["group", "Desserts"], ["created_at", "2020-06-05 00:09:45.118385"], ["updated_at", "2020-06-05 00:09:45.118385"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mCategory Create (0.1ms)[0m  [1m[32mINSERT INTO "categories" ("group", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["group", "Korean"], ["created_at", "2020-06-05 00:09:45.120703"], ["updated_at", "2020-06-05 00:09:45.120703"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mCategory Create (0.3ms)[0m  [1m[32mINSERT INTO "categories" ("group", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["group", "German"], ["created_at", "2020-06-05 00:09:45.122358"], ["updated_at", "2020-06-05 00:09:45.122358"]]
+  [1m[35m (0.3ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mCategory Create (0.2ms)[0m  [1m[32mINSERT INTO "categories" ("group", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["group", "Desserts"], ["created_at", "2020-06-05 00:13:41.239713"], ["updated_at", "2020-06-05 00:13:41.239713"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mCategory Create (0.1ms)[0m  [1m[32mINSERT INTO "categories" ("group", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["group", "Greek"], ["created_at", "2020-06-05 00:13:41.244351"], ["updated_at", "2020-06-05 00:13:41.244351"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mCategory Create (0.2ms)[0m  [1m[32mINSERT INTO "categories" ("group", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["group", "African"], ["created_at", "2020-06-05 00:13:41.245974"], ["updated_at", "2020-06-05 00:13:41.245974"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mCategory Create (0.2ms)[0m  [1m[32mINSERT INTO "categories" ("group", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["group", "Asian"], ["created_at", "2020-06-05 00:13:41.248261"], ["updated_at", "2020-06-05 00:13:41.248261"]]
+  [1m[35m (0.2ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mCategory Create (0.1ms)[0m  [1m[32mINSERT INTO "categories" ("group", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["group", "Brazilian"], ["created_at", "2020-06-05 00:13:41.250930"], ["updated_at", "2020-06-05 00:13:41.250930"]]
+  [1m[35m (0.2ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.3ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mCategory Create (0.2ms)[0m  [1m[32mINSERT INTO "categories" ("group", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["group", "Indian"], ["created_at", "2020-06-05 00:13:41.362760"], ["updated_at", "2020-06-05 00:13:41.362760"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mCategory Create (0.2ms)[0m  [1m[32mINSERT INTO "categories" ("group", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["group", "Juice & Smoothies"], ["created_at", "2020-06-05 00:13:41.365769"], ["updated_at", "2020-06-05 00:13:41.365769"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mCategory Create (0.2ms)[0m  [1m[32mINSERT INTO "categories" ("group", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["group", "Vegan"], ["created_at", "2020-06-05 00:13:41.368307"], ["updated_at", "2020-06-05 00:13:41.368307"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mCategory Create (0.2ms)[0m  [1m[32mINSERT INTO "categories" ("group", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["group", "Argentinian"], ["created_at", "2020-06-05 00:13:41.370663"], ["updated_at", "2020-06-05 00:13:41.370663"]]
+  [1m[35m (0.2ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.2ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mCategory Create (0.1ms)[0m  [1m[32mINSERT INTO "categories" ("group", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["group", "American (Traditional)"], ["created_at", "2020-06-05 00:13:41.511671"], ["updated_at", "2020-06-05 00:13:41.511671"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mCategory Create (0.2ms)[0m  [1m[32mINSERT INTO "categories" ("group", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["group", "French"], ["created_at", "2020-06-05 00:13:41.513788"], ["updated_at", "2020-06-05 00:13:41.513788"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mCategory Create (0.2ms)[0m  [1m[32mINSERT INTO "categories" ("group", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["group", "Japanese"], ["created_at", "2020-06-05 00:13:41.516023"], ["updated_at", "2020-06-05 00:13:41.516023"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mCategory Create (0.2ms)[0m  [1m[32mINSERT INTO "categories" ("group", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["group", "Greek"], ["created_at", "2020-06-05 00:13:41.518481"], ["updated_at", "2020-06-05 00:13:41.518481"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mCategory Create (0.1ms)[0m  [1m[32mINSERT INTO "categories" ("group", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["group", "Comfort Food"], ["created_at", "2020-06-05 00:13:41.520542"], ["updated_at", "2020-06-05 00:13:41.520542"]]
+  [1m[35m (0.2ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mCategory Create (0.1ms)[0m  [1m[32mINSERT INTO "categories" ("group", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["group", "Thai"], ["created_at", "2020-06-05 00:13:41.673050"], ["updated_at", "2020-06-05 00:13:41.673050"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mCategory Create (0.1ms)[0m  [1m[32mINSERT INTO "categories" ("group", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["group", "Asian"], ["created_at", "2020-06-05 00:13:41.675023"], ["updated_at", "2020-06-05 00:13:41.675023"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mCategory Create (0.2ms)[0m  [1m[32mINSERT INTO "categories" ("group", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["group", "French"], ["created_at", "2020-06-05 00:13:41.676265"], ["updated_at", "2020-06-05 00:13:41.676265"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mCategory Create (0.2ms)[0m  [1m[32mINSERT INTO "categories" ("group", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["group", "European"], ["created_at", "2020-06-05 00:13:41.680955"], ["updated_at", "2020-06-05 00:13:41.680955"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mCategory Create (0.6ms)[0m  [1m[32mINSERT INTO "categories" ("group", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["group", "European"], ["created_at", "2020-06-05 00:13:41.682872"], ["updated_at", "2020-06-05 00:13:41.682872"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mCategory Create (0.2ms)[0m  [1m[32mINSERT INTO "categories" ("group", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["group", "Ethiopean"], ["created_at", "2020-06-05 00:13:41.851021"], ["updated_at", "2020-06-05 00:13:41.851021"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mCategory Create (0.2ms)[0m  [1m[32mINSERT INTO "categories" ("group", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["group", "European"], ["created_at", "2020-06-05 00:13:41.853417"], ["updated_at", "2020-06-05 00:13:41.853417"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mCategory Create (0.2ms)[0m  [1m[32mINSERT INTO "categories" ("group", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["group", "Senegalese"], ["created_at", "2020-06-05 00:13:41.855879"], ["updated_at", "2020-06-05 00:13:41.855879"]]
+  [1m[35m (0.2ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mCategory Create (0.1ms)[0m  [1m[32mINSERT INTO "categories" ("group", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["group", "Bakery"], ["created_at", "2020-06-05 00:13:41.860721"], ["updated_at", "2020-06-05 00:13:41.860721"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mCategory Create (0.1ms)[0m  [1m[32mINSERT INTO "categories" ("group", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["group", "German"], ["created_at", "2020-06-05 00:13:41.862520"], ["updated_at", "2020-06-05 00:13:41.862520"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mCategory Create (0.2ms)[0m  [1m[32mINSERT INTO "categories" ("group", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["group", "European"], ["created_at", "2020-06-05 00:13:41.864056"], ["updated_at", "2020-06-05 00:13:41.864056"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mCategory Create (0.2ms)[0m  [1m[32mINSERT INTO "categories" ("group", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["group", "Thai"], ["created_at", "2020-06-05 00:13:41.866456"], ["updated_at", "2020-06-05 00:13:41.866456"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mCategory Create (0.1ms)[0m  [1m[32mINSERT INTO "categories" ("group", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["group", "Comfort Food"], ["created_at", "2020-06-05 00:13:41.869425"], ["updated_at", "2020-06-05 00:13:41.869425"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mCategory Create (0.1ms)[0m  [1m[32mINSERT INTO "categories" ("group", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["group", "Pizza"], ["created_at", "2020-06-05 00:13:41.871644"], ["updated_at", "2020-06-05 00:13:41.871644"]]
+  [1m[35m (0.2ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mCategory Create (0.2ms)[0m  [1m[32mINSERT INTO "categories" ("group", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["group", "Ramen"], ["created_at", "2020-06-05 00:13:42.014670"], ["updated_at", "2020-06-05 00:13:42.014670"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mCategory Create (4.2ms)[0m  [1m[32mINSERT INTO "categories" ("group", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["group", "Greek"], ["created_at", "2020-06-05 00:13:42.017253"], ["updated_at", "2020-06-05 00:13:42.017253"]]
+  [1m[35m (0.2ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (2.9ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (1.3ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (1.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to DropUsersTable (20200605002138)
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (1.4ms)[0m  [1m[35mDROP TABLE "users"[0m
+  [1m[36mprimary::SchemaMigration Create (0.5ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20200605002138"]]
+  [1m[35m (1.8ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.8ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
