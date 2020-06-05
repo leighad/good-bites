@@ -7,10 +7,9 @@
 #   Character.create(name: 'Luke', movie: movies.first)
 
 require 'faker'
-require 'securerandom'
 
-Category.destroy_all 
 Restaurant.destroy_all 
+Category.destroy_all
 
 category_names = []
 30.times do 
@@ -18,37 +17,23 @@ category_names = []
     category = Category.create(group: group)
     category_names << category
 end
-category_names
 
 group_names = category_names.map {|cat| cat.group}.uniq
 
 
 restaurant_list = []
-30.times do 
-    name = Faker::Restaurant.name
-    description = Faker::Restaurant.description
-    review = Faker::Restaurant.review
-    Restaurant.create(rest_name: name, type: type, description: description, review: review, user_id: user.id)
-    group = Faker::Restaurant.type
-    category = Category.create(group: group)
-    category_names << category
-end
-category_names
+category_names.each do |category|
+    10.times do |rest|
+        name = Faker::Restaurant.name
+        description = Faker::Restaurant.description
+        review = Faker::Restaurant.review
+        restaurant = Restaurant.create(name: name, description: description, review: review, category_id: category.id)
+        restaurant_list << restaurant
+    end
+end 
 
 
-# user_collection.each do |user|
-#     list_size = (SecureRandom.random_number(10) + 1).floor
-
-#     (1..list_size).each do |rest|
-#         name = Faker::Restaurant.name
-#         # type = Faker::Restaurant.type
-#         description = Faker::Restaurant.description
-#         review = Faker::Restaurant.review
-#         Restaurant.create(rest_name: name, type: type, description: description, review: review, user_id: user.id)
-#     end
-# end
-
-# user_names.each do |name|
-#     user_collection << User.create(user_name: name)
-# end
+restaurant_names = restaurant_list.map {|rest| rest.name}.uniq
+restaurant_descriptions = restaurant_list.map {|rest| rest.description}.uniq
+restaurant_reviews = restaurant_list.map {|rest| rest.review}.uniq
 
