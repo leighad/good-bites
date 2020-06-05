@@ -4,12 +4,13 @@ body {
 }
 
 header {
-    background-color: #7593f3;
+    background-color: #5f82f3;
     margin: 0 auto;
     height: 50px;
 }
 
 header h1 {
+    color: lightgray;
     padding: 10px;
     margin: 0;
 }
@@ -47,7 +48,7 @@ li {
 button {
     font-size: .65em;
     color: #fff;
-    background-color: green;
+    background-color: rgb(84, 188, 192);
     border-radius: 10px;
 }
 
