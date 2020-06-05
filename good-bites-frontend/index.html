@@ -12,29 +12,51 @@
     </header>
     
     <main>
-    <div class="list" data-id="1"><p>Sample</p>
-        <button data-category-id="1">Add Restaurant</button>
-        <ul>
-            <!-- <li>Jacey (Kakuna) <button class="release" data-pokemon-id="140">Release</button></li>
-            <li>Zachariah (Ditto) <button class="release" data-pokemon-id="141">Release</button></li>
-            <li>Mittie (Farfetch'd) <button class="release" data-pokemon-id="149">Release</button></li>
-            <li>Rosetta (Eevee) <button class="release" data-pokemon-id="150">Release</button></li>
-            <li>Rod (Beedrill) <button class="release" data-pokemon-id="151">Release</button></li> -->
-        </ul>
-    </div>
+        <div id="category-list-container">
+            <div class="card">
+                <span class="name">Category List</span>
+            </div>
+        </div>
+
+        <div id="category-form-container">
+            <div class="card">
+                <span class="create-category-info">Please browse our category list to make a selection.<br> Or create your own category name here.</span>
+                <form id="new-category-form" action="#">
+                    <div class="input-field">
+                        <input type="text" name="name" id="name">
+                    </div>
+                    <input type="submit" value="Create Category" class="btn"/>
+                </form>
+            </div>
+        </div>
+
+        <div id="restaurant-form-container">
+            <div class="card">
+                <div class="list" data-id="1">
+                    <span class="name">Create Restaurant</span>
+                    <button data-category-id="1">Add Restaurant</button>
+                    <ul>
+                        <!-- <li>Jacey (Kakuna) <button class="release" data-pokemon-id="140">Release</button></li>
+                        <li>Zachariah (Ditto) <button class="release" data-pokemon-id="141">Release</button></li>
+                        <li>Mittie (Farfetch'd) <button class="release" data-pokemon-id="149">Release</button></li>
+                        <li>Rosetta (Eevee) <button class="release" data-pokemon-id="150">Release</button></li>
+                        <li>Rod (Beedrill) <button class="release" data-pokemon-id="151">Release</button></li> -->
+                    </ul>
+                </div>
+            </div>
+        </div>
     </main>
+<br>
 
-    <div class="container">
-        <form id="new-category-form">
-            <label>Create Category</label>
-            <input type="text" />
-            <input type="submit" />
-        </form>
-
-        <div id="categories-container">
-
+    <div id="category-container">
+        <div class="card">
+            <div class="card-content">
+                <span class="name">Example Category</span>
+                <p>Category</p>
+            </div>
         </div>
     </div>
+<br>
 
     <script type="application/javascript" src="src/index.js" charset="UTF-8"></script>
 </body>

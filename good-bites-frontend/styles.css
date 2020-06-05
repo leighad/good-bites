@@ -3,8 +3,8 @@ body {
     font-weight: 300;
     line-height: 1.6em;
     font-size: 1.3em;
-    margin: 0;
-    padding: 0;
+    margin: 10;
+    padding: 10;
 }
 
 header {
@@ -29,17 +29,37 @@ main {
     padding-bottom: 30px;
 }
 
+#category-list-container {
+    text-align: center;
+}
+
+#category-form-container {
+    text-align: center;
+}
+
+#restaurant-form-container {
+    text-align: center;
+}
+
 div.card {
+    text-align-last: center;
     background-color: #eeeeee;
     height: 250px;
     width: 300px;
     box-shadow: 10px 10px grey;
     padding: 10px;
     border-radius: 10px;
+    display: inline-block;
+}
+
+span.name {
+    font-size: 1.4em;
+    color: black;
+    font-family: Helvetica;
 }
 
 p {
-    font-size: 1.4em;
+    font-size: 1.2em;
     color: black;
     font-family: Helvetica;
 }
@@ -59,7 +79,7 @@ button {
 
 button.release {
     float: right;
-    background-color: #E1332D;
+    background-color: rgb(240, 106, 101);
 }
 
 @media only screen and (min-width: 500px) {
