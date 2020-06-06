@@ -16,6 +16,8 @@ header {
 header h1 {
     color: lightgray;
     font-size: 1.4em;
+    text-align: left;
+    text-shadow: 1px 1px rgb(3, 3, 3);
     padding: 10px;
     margin: 0;
 }
@@ -46,7 +48,7 @@ div.card {
     background-color: #eeeeee;
     height: 250px;
     width: 300px;
-    box-shadow: 10px 10px grey;
+    box-shadow: 10px 10px lightgrey;
     padding: 10px;
     border-radius: 10px;
     display: inline-block;
