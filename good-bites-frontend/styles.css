@@ -42,6 +42,10 @@ main {
     text-align: center;
 }
 
+/* div.category_container {
+    text-align: center;
+} */
+
 div.card {
     text-align-last: center;
     background-color: #eeeeee;
