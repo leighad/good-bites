@@ -61,12 +61,18 @@ div.card {
 
 div.card-content {
     font-size: 1.5em;
+    display: inline-block;
+
 }
 
 span.name {
     font-size: 1.4em;
     color: black;
     font-family: Helvetica;
+}
+
+span.create-category-info {
+    font-size: 1.45em;
 }
 
 p {
