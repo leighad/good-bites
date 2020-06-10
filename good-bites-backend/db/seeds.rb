@@ -12,7 +12,7 @@ Restaurant.destroy_all
 Category.destroy_all
 
 category_names = []
-30.times do 
+10.times do 
     group = Faker::Restaurant.type
     category = Category.create(group: group)
     category_names << category
