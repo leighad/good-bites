@@ -42,8 +42,10 @@ main {
     text-align: center;
 }
 
-/* div.category_container {
-    text-align: center;
+/* div#category_container {
+    height: 100px;
+    width: 400px;
+    display: inline-block;
 } */
 
 div.card {
