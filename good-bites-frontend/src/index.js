@@ -83,8 +83,22 @@ function mountFormListener() {
     categoryForm.addEventListener("submit", function(event) {
         event.preventDefault()
         const categoryObject = getCategoryData(event)
-        const htmlCat = htmlifyCategory(categoryObject)
-        renderCategory(htmlCat)
-        clearForm(event)
+
+        fetch(CATEGORIES_URL, {
+            method: 'POST', // *GET, POST, PUT, DELETE, etc.
+            headers: {
+                'Content-Type': 'application/json'
+            },
+            body: JSON.stringify(categoryObject) // body data type must match "Content-Type" header
+        })
+        .then(res => res.json())
+        .then((data) => {
+            const htmlCat = htmlifyCategory(data)
+            renderCategory(htmlCat)
+            clearForm(event)        
+        })
+
+
     })
 }
+
