@@ -14762,3 +14762,366 @@ Processing by CategoriesController#index as */*
 Completed 200 OK in 113ms (Views: 106.8ms | ActiveRecord: 5.7ms | Allocations: 39021)
 
 
+Started GET "/categories" for ::1 at 2020-06-10 15:19:41 -0700
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.9ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by CategoriesController#index as */*
+  [1m[36mCategory Load (0.7ms)[0m  [1m[34mSELECT "categories".* FROM "categories"[0m
+  ↳ app/controllers/categories_controller.rb:6:in `index'
+[active_model_serializers]   [1m[36mRestaurant Load (2.1ms)[0m  [1m[34mSELECT "restaurants".* FROM "restaurants" WHERE "restaurants"."category_id" = ?[0m  [["category_id", 2]]
+[active_model_serializers]   ↳ app/controllers/categories_controller.rb:6:in `index'
+[active_model_serializers]   [1m[36mRestaurant Load (0.6ms)[0m  [1m[34mSELECT "restaurants".* FROM "restaurants" WHERE "restaurants"."category_id" = ?[0m  [["category_id", 3]]
+[active_model_serializers]   ↳ app/controllers/categories_controller.rb:6:in `index'
+[active_model_serializers]   [1m[36mRestaurant Load (0.3ms)[0m  [1m[34mSELECT "restaurants".* FROM "restaurants" WHERE "restaurants"."category_id" = ?[0m  [["category_id", 4]]
+[active_model_serializers]   ↳ app/controllers/categories_controller.rb:6:in `index'
+[active_model_serializers]   [1m[36mRestaurant Load (0.3ms)[0m  [1m[34mSELECT "restaurants".* FROM "restaurants" WHERE "restaurants"."category_id" = ?[0m  [["category_id", 5]]
+[active_model_serializers]   ↳ app/controllers/categories_controller.rb:6:in `index'
+[active_model_serializers]   [1m[36mRestaurant Load (0.2ms)[0m  [1m[34mSELECT "restaurants".* FROM "restaurants" WHERE "restaurants"."category_id" = ?[0m  [["category_id", 6]]
+[active_model_serializers]   ↳ app/controllers/categories_controller.rb:6:in `index'
+[active_model_serializers]   [1m[36mRestaurant Load (0.2ms)[0m  [1m[34mSELECT "restaurants".* FROM "restaurants" WHERE "restaurants"."category_id" = ?[0m  [["category_id", 7]]
+[active_model_serializers]   ↳ app/controllers/categories_controller.rb:6:in `index'
+[active_model_serializers]   [1m[36mRestaurant Load (0.2ms)[0m  [1m[34mSELECT "restaurants".* FROM "restaurants" WHERE "restaurants"."category_id" = ?[0m  [["category_id", 8]]
+[active_model_serializers]   ↳ app/controllers/categories_controller.rb:6:in `index'
+[active_model_serializers]   [1m[36mRestaurant Load (0.3ms)[0m  [1m[34mSELECT "restaurants".* FROM "restaurants" WHERE "restaurants"."category_id" = ?[0m  [["category_id", 9]]
+[active_model_serializers]   ↳ app/controllers/categories_controller.rb:6:in `index'
+[active_model_serializers]   [1m[36mRestaurant Load (0.2ms)[0m  [1m[34mSELECT "restaurants".* FROM "restaurants" WHERE "restaurants"."category_id" = ?[0m  [["category_id", 10]]
+[active_model_serializers]   ↳ app/controllers/categories_controller.rb:6:in `index'
+[active_model_serializers]   [1m[36mRestaurant Load (0.2ms)[0m  [1m[34mSELECT "restaurants".* FROM "restaurants" WHERE "restaurants"."category_id" = ?[0m  [["category_id", 11]]
+[active_model_serializers]   ↳ app/controllers/categories_controller.rb:6:in `index'
+[active_model_serializers]   [1m[36mRestaurant Load (0.1ms)[0m  [1m[34mSELECT "restaurants".* FROM "restaurants" WHERE "restaurants"."category_id" = ?[0m  [["category_id", 15]]
+[active_model_serializers]   ↳ app/controllers/categories_controller.rb:6:in `index'
+[active_model_serializers]   [1m[36mRestaurant Load (0.1ms)[0m  [1m[34mSELECT "restaurants".* FROM "restaurants" WHERE "restaurants"."category_id" = ?[0m  [["category_id", 16]]
+[active_model_serializers]   ↳ app/controllers/categories_controller.rb:6:in `index'
+[active_model_serializers]   [1m[36mRestaurant Load (0.1ms)[0m  [1m[34mSELECT "restaurants".* FROM "restaurants" WHERE "restaurants"."category_id" = ?[0m  [["category_id", 17]]
+[active_model_serializers]   ↳ app/controllers/categories_controller.rb:6:in `index'
+[active_model_serializers]   [1m[36mRestaurant Load (0.2ms)[0m  [1m[34mSELECT "restaurants".* FROM "restaurants" WHERE "restaurants"."category_id" = ?[0m  [["category_id", 18]]
+[active_model_serializers]   ↳ app/controllers/categories_controller.rb:6:in `index'
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (91.11ms)
+Completed 200 OK in 123ms (Views: 109.4ms | ActiveRecord: 7.9ms | Allocations: 53739)
+
+
+Started GET "/categories" for ::1 at 2020-06-10 15:20:36 -0700
+Processing by CategoriesController#index as */*
+  [1m[36mCategory Load (0.4ms)[0m  [1m[34mSELECT "categories".* FROM "categories"[0m
+  ↳ app/controllers/categories_controller.rb:6:in `index'
+[active_model_serializers]   [1m[36mRestaurant Load (0.2ms)[0m  [1m[34mSELECT "restaurants".* FROM "restaurants" WHERE "restaurants"."category_id" = ?[0m  [["category_id", 2]]
+[active_model_serializers]   ↳ app/controllers/categories_controller.rb:6:in `index'
+[active_model_serializers]   [1m[36mRestaurant Load (0.2ms)[0m  [1m[34mSELECT "restaurants".* FROM "restaurants" WHERE "restaurants"."category_id" = ?[0m  [["category_id", 3]]
+[active_model_serializers]   ↳ app/controllers/categories_controller.rb:6:in `index'
+[active_model_serializers]   [1m[36mRestaurant Load (0.3ms)[0m  [1m[34mSELECT "restaurants".* FROM "restaurants" WHERE "restaurants"."category_id" = ?[0m  [["category_id", 4]]
+[active_model_serializers]   ↳ app/controllers/categories_controller.rb:6:in `index'
+[active_model_serializers]   [1m[36mRestaurant Load (0.5ms)[0m  [1m[34mSELECT "restaurants".* FROM "restaurants" WHERE "restaurants"."category_id" = ?[0m  [["category_id", 5]]
+[active_model_serializers]   ↳ app/controllers/categories_controller.rb:6:in `index'
+[active_model_serializers]   [1m[36mRestaurant Load (0.3ms)[0m  [1m[34mSELECT "restaurants".* FROM "restaurants" WHERE "restaurants"."category_id" = ?[0m  [["category_id", 6]]
+[active_model_serializers]   ↳ app/controllers/categories_controller.rb:6:in `index'
+[active_model_serializers]   [1m[36mRestaurant Load (0.3ms)[0m  [1m[34mSELECT "restaurants".* FROM "restaurants" WHERE "restaurants"."category_id" = ?[0m  [["category_id", 7]]
+[active_model_serializers]   ↳ app/controllers/categories_controller.rb:6:in `index'
+[active_model_serializers]   [1m[36mRestaurant Load (0.2ms)[0m  [1m[34mSELECT "restaurants".* FROM "restaurants" WHERE "restaurants"."category_id" = ?[0m  [["category_id", 8]]
+[active_model_serializers]   ↳ app/controllers/categories_controller.rb:6:in `index'
+[active_model_serializers]   [1m[36mRestaurant Load (0.3ms)[0m  [1m[34mSELECT "restaurants".* FROM "restaurants" WHERE "restaurants"."category_id" = ?[0m  [["category_id", 9]]
+[active_model_serializers]   ↳ app/controllers/categories_controller.rb:6:in `index'
+[active_model_serializers]   [1m[36mRestaurant Load (0.4ms)[0m  [1m[34mSELECT "restaurants".* FROM "restaurants" WHERE "restaurants"."category_id" = ?[0m  [["category_id", 10]]
+[active_model_serializers]   ↳ app/controllers/categories_controller.rb:6:in `index'
+[active_model_serializers]   [1m[36mRestaurant Load (0.8ms)[0m  [1m[34mSELECT "restaurants".* FROM "restaurants" WHERE "restaurants"."category_id" = ?[0m  [["category_id", 11]]
+[active_model_serializers]   ↳ app/controllers/categories_controller.rb:6:in `index'
+[active_model_serializers]   [1m[36mRestaurant Load (0.2ms)[0m  [1m[34mSELECT "restaurants".* FROM "restaurants" WHERE "restaurants"."category_id" = ?[0m  [["category_id", 15]]
+[active_model_serializers]   ↳ app/controllers/categories_controller.rb:6:in `index'
+[active_model_serializers]   [1m[36mRestaurant Load (0.1ms)[0m  [1m[34mSELECT "restaurants".* FROM "restaurants" WHERE "restaurants"."category_id" = ?[0m  [["category_id", 16]]
+[active_model_serializers]   ↳ app/controllers/categories_controller.rb:6:in `index'
+[active_model_serializers]   [1m[36mRestaurant Load (0.1ms)[0m  [1m[34mSELECT "restaurants".* FROM "restaurants" WHERE "restaurants"."category_id" = ?[0m  [["category_id", 17]]
+[active_model_serializers]   ↳ app/controllers/categories_controller.rb:6:in `index'
+[active_model_serializers]   [1m[36mRestaurant Load (0.4ms)[0m  [1m[34mSELECT "restaurants".* FROM "restaurants" WHERE "restaurants"."category_id" = ?[0m  [["category_id", 18]]
+[active_model_serializers]   ↳ app/controllers/categories_controller.rb:6:in `index'
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (116.63ms)
+Completed 200 OK in 120ms (Views: 115.0ms | ActiveRecord: 4.8ms | Allocations: 39043)
+
+
+Started GET "/categories" for ::1 at 2020-06-10 15:22:30 -0700
+Processing by CategoriesController#index as */*
+  [1m[36mCategory Load (0.4ms)[0m  [1m[34mSELECT "categories".* FROM "categories"[0m
+  ↳ app/controllers/categories_controller.rb:6:in `index'
+[active_model_serializers]   [1m[36mRestaurant Load (0.2ms)[0m  [1m[34mSELECT "restaurants".* FROM "restaurants" WHERE "restaurants"."category_id" = ?[0m  [["category_id", 2]]
+[active_model_serializers]   ↳ app/controllers/categories_controller.rb:6:in `index'
+[active_model_serializers]   [1m[36mRestaurant Load (0.2ms)[0m  [1m[34mSELECT "restaurants".* FROM "restaurants" WHERE "restaurants"."category_id" = ?[0m  [["category_id", 3]]
+[active_model_serializers]   ↳ app/controllers/categories_controller.rb:6:in `index'
+[active_model_serializers]   [1m[36mRestaurant Load (0.2ms)[0m  [1m[34mSELECT "restaurants".* FROM "restaurants" WHERE "restaurants"."category_id" = ?[0m  [["category_id", 4]]
+[active_model_serializers]   ↳ app/controllers/categories_controller.rb:6:in `index'
+[active_model_serializers]   [1m[36mRestaurant Load (0.2ms)[0m  [1m[34mSELECT "restaurants".* FROM "restaurants" WHERE "restaurants"."category_id" = ?[0m  [["category_id", 5]]
+[active_model_serializers]   ↳ app/controllers/categories_controller.rb:6:in `index'
+[active_model_serializers]   [1m[36mRestaurant Load (0.4ms)[0m  [1m[34mSELECT "restaurants".* FROM "restaurants" WHERE "restaurants"."category_id" = ?[0m  [["category_id", 6]]
+[active_model_serializers]   ↳ app/controllers/categories_controller.rb:6:in `index'
+[active_model_serializers]   [1m[36mRestaurant Load (0.3ms)[0m  [1m[34mSELECT "restaurants".* FROM "restaurants" WHERE "restaurants"."category_id" = ?[0m  [["category_id", 7]]
+[active_model_serializers]   ↳ app/controllers/categories_controller.rb:6:in `index'
+[active_model_serializers]   [1m[36mRestaurant Load (0.4ms)[0m  [1m[34mSELECT "restaurants".* FROM "restaurants" WHERE "restaurants"."category_id" = ?[0m  [["category_id", 8]]
+[active_model_serializers]   ↳ app/controllers/categories_controller.rb:6:in `index'
+[active_model_serializers]   [1m[36mRestaurant Load (0.3ms)[0m  [1m[34mSELECT "restaurants".* FROM "restaurants" WHERE "restaurants"."category_id" = ?[0m  [["category_id", 9]]
+[active_model_serializers]   ↳ app/controllers/categories_controller.rb:6:in `index'
+[active_model_serializers]   [1m[36mRestaurant Load (0.5ms)[0m  [1m[34mSELECT "restaurants".* FROM "restaurants" WHERE "restaurants"."category_id" = ?[0m  [["category_id", 10]]
+[active_model_serializers]   ↳ app/controllers/categories_controller.rb:6:in `index'
+[active_model_serializers]   [1m[36mRestaurant Load (0.3ms)[0m  [1m[34mSELECT "restaurants".* FROM "restaurants" WHERE "restaurants"."category_id" = ?[0m  [["category_id", 11]]
+[active_model_serializers]   ↳ app/controllers/categories_controller.rb:6:in `index'
+[active_model_serializers]   [1m[36mRestaurant Load (0.2ms)[0m  [1m[34mSELECT "restaurants".* FROM "restaurants" WHERE "restaurants"."category_id" = ?[0m  [["category_id", 15]]
+[active_model_serializers]   ↳ app/controllers/categories_controller.rb:6:in `index'
+[active_model_serializers]   [1m[36mRestaurant Load (0.4ms)[0m  [1m[34mSELECT "restaurants".* FROM "restaurants" WHERE "restaurants"."category_id" = ?[0m  [["category_id", 16]]
+[active_model_serializers]   ↳ app/controllers/categories_controller.rb:6:in `index'
+[active_model_serializers]   [1m[36mRestaurant Load (0.3ms)[0m  [1m[34mSELECT "restaurants".* FROM "restaurants" WHERE "restaurants"."category_id" = ?[0m  [["category_id", 17]]
+[active_model_serializers]   ↳ app/controllers/categories_controller.rb:6:in `index'
+[active_model_serializers]   [1m[36mRestaurant Load (0.3ms)[0m  [1m[34mSELECT "restaurants".* FROM "restaurants" WHERE "restaurants"."category_id" = ?[0m  [["category_id", 18]]
+[active_model_serializers]   ↳ app/controllers/categories_controller.rb:6:in `index'
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (97.18ms)
+Completed 200 OK in 101ms (Views: 96.6ms | ActiveRecord: 4.6ms | Allocations: 39040)
+
+
+Started GET "/categories" for ::1 at 2020-06-10 15:22:48 -0700
+Processing by CategoriesController#index as */*
+  [1m[36mCategory Load (0.2ms)[0m  [1m[34mSELECT "categories".* FROM "categories"[0m
+  ↳ app/controllers/categories_controller.rb:6:in `index'
+[active_model_serializers]   [1m[36mRestaurant Load (0.3ms)[0m  [1m[34mSELECT "restaurants".* FROM "restaurants" WHERE "restaurants"."category_id" = ?[0m  [["category_id", 2]]
+[active_model_serializers]   ↳ app/controllers/categories_controller.rb:6:in `index'
+[active_model_serializers]   [1m[36mRestaurant Load (0.2ms)[0m  [1m[34mSELECT "restaurants".* FROM "restaurants" WHERE "restaurants"."category_id" = ?[0m  [["category_id", 3]]
+[active_model_serializers]   ↳ app/controllers/categories_controller.rb:6:in `index'
+[active_model_serializers]   [1m[36mRestaurant Load (0.3ms)[0m  [1m[34mSELECT "restaurants".* FROM "restaurants" WHERE "restaurants"."category_id" = ?[0m  [["category_id", 4]]
+[active_model_serializers]   ↳ app/controllers/categories_controller.rb:6:in `index'
+[active_model_serializers]   [1m[36mRestaurant Load (0.5ms)[0m  [1m[34mSELECT "restaurants".* FROM "restaurants" WHERE "restaurants"."category_id" = ?[0m  [["category_id", 5]]
+[active_model_serializers]   ↳ app/controllers/categories_controller.rb:6:in `index'
+[active_model_serializers]   [1m[36mRestaurant Load (0.3ms)[0m  [1m[34mSELECT "restaurants".* FROM "restaurants" WHERE "restaurants"."category_id" = ?[0m  [["category_id", 6]]
+[active_model_serializers]   ↳ app/controllers/categories_controller.rb:6:in `index'
+[active_model_serializers]   [1m[36mRestaurant Load (0.3ms)[0m  [1m[34mSELECT "restaurants".* FROM "restaurants" WHERE "restaurants"."category_id" = ?[0m  [["category_id", 7]]
+[active_model_serializers]   ↳ app/controllers/categories_controller.rb:6:in `index'
+[active_model_serializers]   [1m[36mRestaurant Load (0.3ms)[0m  [1m[34mSELECT "restaurants".* FROM "restaurants" WHERE "restaurants"."category_id" = ?[0m  [["category_id", 8]]
+[active_model_serializers]   ↳ app/controllers/categories_controller.rb:6:in `index'
+[active_model_serializers]   [1m[36mRestaurant Load (0.2ms)[0m  [1m[34mSELECT "restaurants".* FROM "restaurants" WHERE "restaurants"."category_id" = ?[0m  [["category_id", 9]]
+[active_model_serializers]   ↳ app/controllers/categories_controller.rb:6:in `index'
+[active_model_serializers]   [1m[36mRestaurant Load (2.8ms)[0m  [1m[34mSELECT "restaurants".* FROM "restaurants" WHERE "restaurants"."category_id" = ?[0m  [["category_id", 10]]
+[active_model_serializers]   ↳ app/controllers/categories_controller.rb:6:in `index'
+[active_model_serializers]   [1m[36mRestaurant Load (0.3ms)[0m  [1m[34mSELECT "restaurants".* FROM "restaurants" WHERE "restaurants"."category_id" = ?[0m  [["category_id", 11]]
+[active_model_serializers]   ↳ app/controllers/categories_controller.rb:6:in `index'
+[active_model_serializers]   [1m[36mRestaurant Load (0.2ms)[0m  [1m[34mSELECT "restaurants".* FROM "restaurants" WHERE "restaurants"."category_id" = ?[0m  [["category_id", 15]]
+[active_model_serializers]   ↳ app/controllers/categories_controller.rb:6:in `index'
+[active_model_serializers]   [1m[36mRestaurant Load (0.2ms)[0m  [1m[34mSELECT "restaurants".* FROM "restaurants" WHERE "restaurants"."category_id" = ?[0m  [["category_id", 16]]
+[active_model_serializers]   ↳ app/controllers/categories_controller.rb:6:in `index'
+[active_model_serializers]   [1m[36mRestaurant Load (0.3ms)[0m  [1m[34mSELECT "restaurants".* FROM "restaurants" WHERE "restaurants"."category_id" = ?[0m  [["category_id", 17]]
+[active_model_serializers]   ↳ app/controllers/categories_controller.rb:6:in `index'
+[active_model_serializers]   [1m[36mRestaurant Load (0.2ms)[0m  [1m[34mSELECT "restaurants".* FROM "restaurants" WHERE "restaurants"."category_id" = ?[0m  [["category_id", 18]]
+[active_model_serializers]   ↳ app/controllers/categories_controller.rb:6:in `index'
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (109.46ms)
+Completed 200 OK in 114ms (Views: 106.9ms | ActiveRecord: 6.5ms | Allocations: 39043)
+
+
+Started GET "/categories" for ::1 at 2020-06-10 15:23:33 -0700
+Processing by CategoriesController#index as */*
+  [1m[36mCategory Load (0.2ms)[0m  [1m[34mSELECT "categories".* FROM "categories"[0m
+  ↳ app/controllers/categories_controller.rb:6:in `index'
+[active_model_serializers]   [1m[36mRestaurant Load (0.6ms)[0m  [1m[34mSELECT "restaurants".* FROM "restaurants" WHERE "restaurants"."category_id" = ?[0m  [["category_id", 2]]
+[active_model_serializers]   ↳ app/controllers/categories_controller.rb:6:in `index'
+[active_model_serializers]   [1m[36mRestaurant Load (0.3ms)[0m  [1m[34mSELECT "restaurants".* FROM "restaurants" WHERE "restaurants"."category_id" = ?[0m  [["category_id", 3]]
+[active_model_serializers]   ↳ app/controllers/categories_controller.rb:6:in `index'
+[active_model_serializers]   [1m[36mRestaurant Load (0.3ms)[0m  [1m[34mSELECT "restaurants".* FROM "restaurants" WHERE "restaurants"."category_id" = ?[0m  [["category_id", 4]]
+[active_model_serializers]   ↳ app/controllers/categories_controller.rb:6:in `index'
+[active_model_serializers]   [1m[36mRestaurant Load (0.3ms)[0m  [1m[34mSELECT "restaurants".* FROM "restaurants" WHERE "restaurants"."category_id" = ?[0m  [["category_id", 5]]
+[active_model_serializers]   ↳ app/controllers/categories_controller.rb:6:in `index'
+[active_model_serializers]   [1m[36mRestaurant Load (0.3ms)[0m  [1m[34mSELECT "restaurants".* FROM "restaurants" WHERE "restaurants"."category_id" = ?[0m  [["category_id", 6]]
+[active_model_serializers]   ↳ app/controllers/categories_controller.rb:6:in `index'
+[active_model_serializers]   [1m[36mRestaurant Load (0.2ms)[0m  [1m[34mSELECT "restaurants".* FROM "restaurants" WHERE "restaurants"."category_id" = ?[0m  [["category_id", 7]]
+[active_model_serializers]   ↳ app/controllers/categories_controller.rb:6:in `index'
+[active_model_serializers]   [1m[36mRestaurant Load (0.2ms)[0m  [1m[34mSELECT "restaurants".* FROM "restaurants" WHERE "restaurants"."category_id" = ?[0m  [["category_id", 8]]
+[active_model_serializers]   ↳ app/controllers/categories_controller.rb:6:in `index'
+[active_model_serializers]   [1m[36mRestaurant Load (0.2ms)[0m  [1m[34mSELECT "restaurants".* FROM "restaurants" WHERE "restaurants"."category_id" = ?[0m  [["category_id", 9]]
+[active_model_serializers]   ↳ app/controllers/categories_controller.rb:6:in `index'
+[active_model_serializers]   [1m[36mRestaurant Load (1.0ms)[0m  [1m[34mSELECT "restaurants".* FROM "restaurants" WHERE "restaurants"."category_id" = ?[0m  [["category_id", 10]]
+[active_model_serializers]   ↳ app/controllers/categories_controller.rb:6:in `index'
+[active_model_serializers]   [1m[36mRestaurant Load (0.4ms)[0m  [1m[34mSELECT "restaurants".* FROM "restaurants" WHERE "restaurants"."category_id" = ?[0m  [["category_id", 11]]
+[active_model_serializers]   ↳ app/controllers/categories_controller.rb:6:in `index'
+[active_model_serializers]   [1m[36mRestaurant Load (0.2ms)[0m  [1m[34mSELECT "restaurants".* FROM "restaurants" WHERE "restaurants"."category_id" = ?[0m  [["category_id", 15]]
+[active_model_serializers]   ↳ app/controllers/categories_controller.rb:6:in `index'
+[active_model_serializers]   [1m[36mRestaurant Load (0.2ms)[0m  [1m[34mSELECT "restaurants".* FROM "restaurants" WHERE "restaurants"."category_id" = ?[0m  [["category_id", 16]]
+[active_model_serializers]   ↳ app/controllers/categories_controller.rb:6:in `index'
+[active_model_serializers]   [1m[36mRestaurant Load (0.3ms)[0m  [1m[34mSELECT "restaurants".* FROM "restaurants" WHERE "restaurants"."category_id" = ?[0m  [["category_id", 17]]
+[active_model_serializers]   ↳ app/controllers/categories_controller.rb:6:in `index'
+[active_model_serializers]   [1m[36mRestaurant Load (0.2ms)[0m  [1m[34mSELECT "restaurants".* FROM "restaurants" WHERE "restaurants"."category_id" = ?[0m  [["category_id", 18]]
+[active_model_serializers]   ↳ app/controllers/categories_controller.rb:6:in `index'
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (100.07ms)
+Completed 200 OK in 106ms (Views: 100.4ms | ActiveRecord: 4.9ms | Allocations: 39040)
+
+
+Started GET "/categories" for ::1 at 2020-06-10 15:23:49 -0700
+Processing by CategoriesController#index as */*
+  [1m[36mCategory Load (0.2ms)[0m  [1m[34mSELECT "categories".* FROM "categories"[0m
+  ↳ app/controllers/categories_controller.rb:6:in `index'
+[active_model_serializers]   [1m[36mRestaurant Load (0.3ms)[0m  [1m[34mSELECT "restaurants".* FROM "restaurants" WHERE "restaurants"."category_id" = ?[0m  [["category_id", 2]]
+[active_model_serializers]   ↳ app/controllers/categories_controller.rb:6:in `index'
+[active_model_serializers]   [1m[36mRestaurant Load (0.2ms)[0m  [1m[34mSELECT "restaurants".* FROM "restaurants" WHERE "restaurants"."category_id" = ?[0m  [["category_id", 3]]
+[active_model_serializers]   ↳ app/controllers/categories_controller.rb:6:in `index'
+[active_model_serializers]   [1m[36mRestaurant Load (0.2ms)[0m  [1m[34mSELECT "restaurants".* FROM "restaurants" WHERE "restaurants"."category_id" = ?[0m  [["category_id", 4]]
+[active_model_serializers]   ↳ app/controllers/categories_controller.rb:6:in `index'
+[active_model_serializers]   [1m[36mRestaurant Load (0.2ms)[0m  [1m[34mSELECT "restaurants".* FROM "restaurants" WHERE "restaurants"."category_id" = ?[0m  [["category_id", 5]]
+[active_model_serializers]   ↳ app/controllers/categories_controller.rb:6:in `index'
+[active_model_serializers]   [1m[36mRestaurant Load (0.3ms)[0m  [1m[34mSELECT "restaurants".* FROM "restaurants" WHERE "restaurants"."category_id" = ?[0m  [["category_id", 6]]
+[active_model_serializers]   ↳ app/controllers/categories_controller.rb:6:in `index'
+[active_model_serializers]   [1m[36mRestaurant Load (0.2ms)[0m  [1m[34mSELECT "restaurants".* FROM "restaurants" WHERE "restaurants"."category_id" = ?[0m  [["category_id", 7]]
+[active_model_serializers]   ↳ app/controllers/categories_controller.rb:6:in `index'
+[active_model_serializers]   [1m[36mRestaurant Load (0.2ms)[0m  [1m[34mSELECT "restaurants".* FROM "restaurants" WHERE "restaurants"."category_id" = ?[0m  [["category_id", 8]]
+[active_model_serializers]   ↳ app/controllers/categories_controller.rb:6:in `index'
+[active_model_serializers]   [1m[36mRestaurant Load (0.4ms)[0m  [1m[34mSELECT "restaurants".* FROM "restaurants" WHERE "restaurants"."category_id" = ?[0m  [["category_id", 9]]
+[active_model_serializers]   ↳ app/controllers/categories_controller.rb:6:in `index'
+[active_model_serializers]   [1m[36mRestaurant Load (0.3ms)[0m  [1m[34mSELECT "restaurants".* FROM "restaurants" WHERE "restaurants"."category_id" = ?[0m  [["category_id", 10]]
+[active_model_serializers]   ↳ app/controllers/categories_controller.rb:6:in `index'
+[active_model_serializers]   [1m[36mRestaurant Load (0.4ms)[0m  [1m[34mSELECT "restaurants".* FROM "restaurants" WHERE "restaurants"."category_id" = ?[0m  [["category_id", 11]]
+[active_model_serializers]   ↳ app/controllers/categories_controller.rb:6:in `index'
+[active_model_serializers]   [1m[36mRestaurant Load (0.2ms)[0m  [1m[34mSELECT "restaurants".* FROM "restaurants" WHERE "restaurants"."category_id" = ?[0m  [["category_id", 15]]
+[active_model_serializers]   ↳ app/controllers/categories_controller.rb:6:in `index'
+[active_model_serializers]   [1m[36mRestaurant Load (0.2ms)[0m  [1m[34mSELECT "restaurants".* FROM "restaurants" WHERE "restaurants"."category_id" = ?[0m  [["category_id", 16]]
+[active_model_serializers]   ↳ app/controllers/categories_controller.rb:6:in `index'
+[active_model_serializers]   [1m[36mRestaurant Load (0.2ms)[0m  [1m[34mSELECT "restaurants".* FROM "restaurants" WHERE "restaurants"."category_id" = ?[0m  [["category_id", 17]]
+[active_model_serializers]   ↳ app/controllers/categories_controller.rb:6:in `index'
+[active_model_serializers]   [1m[36mRestaurant Load (0.3ms)[0m  [1m[34mSELECT "restaurants".* FROM "restaurants" WHERE "restaurants"."category_id" = ?[0m  [["category_id", 18]]
+[active_model_serializers]   ↳ app/controllers/categories_controller.rb:6:in `index'
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (107.11ms)
+Completed 200 OK in 110ms (Views: 106.0ms | ActiveRecord: 3.9ms | Allocations: 39024)
+
+
+Started GET "/categories" for ::1 at 2020-06-10 15:24:03 -0700
+Processing by CategoriesController#index as */*
+  [1m[36mCategory Load (0.3ms)[0m  [1m[34mSELECT "categories".* FROM "categories"[0m
+  ↳ app/controllers/categories_controller.rb:6:in `index'
+[active_model_serializers]   [1m[36mRestaurant Load (0.3ms)[0m  [1m[34mSELECT "restaurants".* FROM "restaurants" WHERE "restaurants"."category_id" = ?[0m  [["category_id", 2]]
+[active_model_serializers]   ↳ app/controllers/categories_controller.rb:6:in `index'
+[active_model_serializers]   [1m[36mRestaurant Load (0.4ms)[0m  [1m[34mSELECT "restaurants".* FROM "restaurants" WHERE "restaurants"."category_id" = ?[0m  [["category_id", 3]]
+[active_model_serializers]   ↳ app/controllers/categories_controller.rb:6:in `index'
+[active_model_serializers]   [1m[36mRestaurant Load (0.3ms)[0m  [1m[34mSELECT "restaurants".* FROM "restaurants" WHERE "restaurants"."category_id" = ?[0m  [["category_id", 4]]
+[active_model_serializers]   ↳ app/controllers/categories_controller.rb:6:in `index'
+[active_model_serializers]   [1m[36mRestaurant Load (0.3ms)[0m  [1m[34mSELECT "restaurants".* FROM "restaurants" WHERE "restaurants"."category_id" = ?[0m  [["category_id", 5]]
+[active_model_serializers]   ↳ app/controllers/categories_controller.rb:6:in `index'
+[active_model_serializers]   [1m[36mRestaurant Load (0.3ms)[0m  [1m[34mSELECT "restaurants".* FROM "restaurants" WHERE "restaurants"."category_id" = ?[0m  [["category_id", 6]]
+[active_model_serializers]   ↳ app/controllers/categories_controller.rb:6:in `index'
+[active_model_serializers]   [1m[36mRestaurant Load (0.2ms)[0m  [1m[34mSELECT "restaurants".* FROM "restaurants" WHERE "restaurants"."category_id" = ?[0m  [["category_id", 7]]
+[active_model_serializers]   ↳ app/controllers/categories_controller.rb:6:in `index'
+[active_model_serializers]   [1m[36mRestaurant Load (0.3ms)[0m  [1m[34mSELECT "restaurants".* FROM "restaurants" WHERE "restaurants"."category_id" = ?[0m  [["category_id", 8]]
+[active_model_serializers]   ↳ app/controllers/categories_controller.rb:6:in `index'
+[active_model_serializers]   [1m[36mRestaurant Load (0.4ms)[0m  [1m[34mSELECT "restaurants".* FROM "restaurants" WHERE "restaurants"."category_id" = ?[0m  [["category_id", 9]]
+[active_model_serializers]   ↳ app/controllers/categories_controller.rb:6:in `index'
+[active_model_serializers]   [1m[36mRestaurant Load (0.2ms)[0m  [1m[34mSELECT "restaurants".* FROM "restaurants" WHERE "restaurants"."category_id" = ?[0m  [["category_id", 10]]
+[active_model_serializers]   ↳ app/controllers/categories_controller.rb:6:in `index'
+[active_model_serializers]   [1m[36mRestaurant Load (0.2ms)[0m  [1m[34mSELECT "restaurants".* FROM "restaurants" WHERE "restaurants"."category_id" = ?[0m  [["category_id", 11]]
+[active_model_serializers]   ↳ app/controllers/categories_controller.rb:6:in `index'
+[active_model_serializers]   [1m[36mRestaurant Load (0.3ms)[0m  [1m[34mSELECT "restaurants".* FROM "restaurants" WHERE "restaurants"."category_id" = ?[0m  [["category_id", 15]]
+[active_model_serializers]   ↳ app/controllers/categories_controller.rb:6:in `index'
+[active_model_serializers]   [1m[36mRestaurant Load (0.2ms)[0m  [1m[34mSELECT "restaurants".* FROM "restaurants" WHERE "restaurants"."category_id" = ?[0m  [["category_id", 16]]
+[active_model_serializers]   ↳ app/controllers/categories_controller.rb:6:in `index'
+[active_model_serializers]   [1m[36mRestaurant Load (0.1ms)[0m  [1m[34mSELECT "restaurants".* FROM "restaurants" WHERE "restaurants"."category_id" = ?[0m  [["category_id", 17]]
+[active_model_serializers]   ↳ app/controllers/categories_controller.rb:6:in `index'
+[active_model_serializers]   [1m[36mRestaurant Load (0.2ms)[0m  [1m[34mSELECT "restaurants".* FROM "restaurants" WHERE "restaurants"."category_id" = ?[0m  [["category_id", 18]]
+[active_model_serializers]   ↳ app/controllers/categories_controller.rb:6:in `index'
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (105.19ms)
+Completed 200 OK in 110ms (Views: 105.4ms | ActiveRecord: 4.1ms | Allocations: 39021)
+
+
+Started GET "/categories" for ::1 at 2020-06-10 15:25:59 -0700
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by CategoriesController#index as */*
+  [1m[36mCategory Load (0.7ms)[0m  [1m[34mSELECT "categories".* FROM "categories"[0m
+  ↳ app/controllers/categories_controller.rb:6:in `index'
+[active_model_serializers]   [1m[36mRestaurant Load (1.7ms)[0m  [1m[34mSELECT "restaurants".* FROM "restaurants" WHERE "restaurants"."category_id" = ?[0m  [["category_id", 2]]
+[active_model_serializers]   ↳ app/controllers/categories_controller.rb:6:in `index'
+[active_model_serializers]   [1m[36mRestaurant Load (0.2ms)[0m  [1m[34mSELECT "restaurants".* FROM "restaurants" WHERE "restaurants"."category_id" = ?[0m  [["category_id", 3]]
+[active_model_serializers]   ↳ app/controllers/categories_controller.rb:6:in `index'
+[active_model_serializers]   [1m[36mRestaurant Load (0.3ms)[0m  [1m[34mSELECT "restaurants".* FROM "restaurants" WHERE "restaurants"."category_id" = ?[0m  [["category_id", 4]]
+[active_model_serializers]   ↳ app/controllers/categories_controller.rb:6:in `index'
+[active_model_serializers]   [1m[36mRestaurant Load (0.2ms)[0m  [1m[34mSELECT "restaurants".* FROM "restaurants" WHERE "restaurants"."category_id" = ?[0m  [["category_id", 5]]
+[active_model_serializers]   ↳ app/controllers/categories_controller.rb:6:in `index'
+[active_model_serializers]   [1m[36mRestaurant Load (0.2ms)[0m  [1m[34mSELECT "restaurants".* FROM "restaurants" WHERE "restaurants"."category_id" = ?[0m  [["category_id", 6]]
+[active_model_serializers]   ↳ app/controllers/categories_controller.rb:6:in `index'
+[active_model_serializers]   [1m[36mRestaurant Load (0.2ms)[0m  [1m[34mSELECT "restaurants".* FROM "restaurants" WHERE "restaurants"."category_id" = ?[0m  [["category_id", 7]]
+[active_model_serializers]   ↳ app/controllers/categories_controller.rb:6:in `index'
+[active_model_serializers]   [1m[36mRestaurant Load (0.5ms)[0m  [1m[34mSELECT "restaurants".* FROM "restaurants" WHERE "restaurants"."category_id" = ?[0m  [["category_id", 8]]
+[active_model_serializers]   ↳ app/controllers/categories_controller.rb:6:in `index'
+[active_model_serializers]   [1m[36mRestaurant Load (0.3ms)[0m  [1m[34mSELECT "restaurants".* FROM "restaurants" WHERE "restaurants"."category_id" = ?[0m  [["category_id", 9]]
+[active_model_serializers]   ↳ app/controllers/categories_controller.rb:6:in `index'
+[active_model_serializers]   [1m[36mRestaurant Load (0.3ms)[0m  [1m[34mSELECT "restaurants".* FROM "restaurants" WHERE "restaurants"."category_id" = ?[0m  [["category_id", 10]]
+[active_model_serializers]   ↳ app/controllers/categories_controller.rb:6:in `index'
+[active_model_serializers]   [1m[36mRestaurant Load (0.2ms)[0m  [1m[34mSELECT "restaurants".* FROM "restaurants" WHERE "restaurants"."category_id" = ?[0m  [["category_id", 11]]
+[active_model_serializers]   ↳ app/controllers/categories_controller.rb:6:in `index'
+[active_model_serializers]   [1m[36mRestaurant Load (0.2ms)[0m  [1m[34mSELECT "restaurants".* FROM "restaurants" WHERE "restaurants"."category_id" = ?[0m  [["category_id", 15]]
+[active_model_serializers]   ↳ app/controllers/categories_controller.rb:6:in `index'
+[active_model_serializers]   [1m[36mRestaurant Load (0.2ms)[0m  [1m[34mSELECT "restaurants".* FROM "restaurants" WHERE "restaurants"."category_id" = ?[0m  [["category_id", 16]]
+[active_model_serializers]   ↳ app/controllers/categories_controller.rb:6:in `index'
+[active_model_serializers]   [1m[36mRestaurant Load (0.2ms)[0m  [1m[34mSELECT "restaurants".* FROM "restaurants" WHERE "restaurants"."category_id" = ?[0m  [["category_id", 17]]
+[active_model_serializers]   ↳ app/controllers/categories_controller.rb:6:in `index'
+[active_model_serializers]   [1m[36mRestaurant Load (0.1ms)[0m  [1m[34mSELECT "restaurants".* FROM "restaurants" WHERE "restaurants"."category_id" = ?[0m  [["category_id", 18]]
+[active_model_serializers]   ↳ app/controllers/categories_controller.rb:6:in `index'
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (102.33ms)
+Completed 200 OK in 119ms (Views: 108.2ms | ActiveRecord: 7.8ms | Allocations: 48847)
+
+
+Started GET "/categories" for ::1 at 2020-06-10 15:26:17 -0700
+Processing by CategoriesController#index as */*
+  [1m[36mCategory Load (0.2ms)[0m  [1m[34mSELECT "categories".* FROM "categories"[0m
+  ↳ app/controllers/categories_controller.rb:6:in `index'
+[active_model_serializers]   [1m[36mRestaurant Load (0.4ms)[0m  [1m[34mSELECT "restaurants".* FROM "restaurants" WHERE "restaurants"."category_id" = ?[0m  [["category_id", 2]]
+[active_model_serializers]   ↳ app/controllers/categories_controller.rb:6:in `index'
+[active_model_serializers]   [1m[36mRestaurant Load (0.2ms)[0m  [1m[34mSELECT "restaurants".* FROM "restaurants" WHERE "restaurants"."category_id" = ?[0m  [["category_id", 3]]
+[active_model_serializers]   ↳ app/controllers/categories_controller.rb:6:in `index'
+[active_model_serializers]   [1m[36mRestaurant Load (0.2ms)[0m  [1m[34mSELECT "restaurants".* FROM "restaurants" WHERE "restaurants"."category_id" = ?[0m  [["category_id", 4]]
+[active_model_serializers]   ↳ app/controllers/categories_controller.rb:6:in `index'
+[active_model_serializers]   [1m[36mRestaurant Load (0.3ms)[0m  [1m[34mSELECT "restaurants".* FROM "restaurants" WHERE "restaurants"."category_id" = ?[0m  [["category_id", 5]]
+[active_model_serializers]   ↳ app/controllers/categories_controller.rb:6:in `index'
+[active_model_serializers]   [1m[36mRestaurant Load (0.2ms)[0m  [1m[34mSELECT "restaurants".* FROM "restaurants" WHERE "restaurants"."category_id" = ?[0m  [["category_id", 6]]
+[active_model_serializers]   ↳ app/controllers/categories_controller.rb:6:in `index'
+[active_model_serializers]   [1m[36mRestaurant Load (0.2ms)[0m  [1m[34mSELECT "restaurants".* FROM "restaurants" WHERE "restaurants"."category_id" = ?[0m  [["category_id", 7]]
+[active_model_serializers]   ↳ app/controllers/categories_controller.rb:6:in `index'
+[active_model_serializers]   [1m[36mRestaurant Load (0.3ms)[0m  [1m[34mSELECT "restaurants".* FROM "restaurants" WHERE "restaurants"."category_id" = ?[0m  [["category_id", 8]]
+[active_model_serializers]   ↳ app/controllers/categories_controller.rb:6:in `index'
+[active_model_serializers]   [1m[36mRestaurant Load (0.3ms)[0m  [1m[34mSELECT "restaurants".* FROM "restaurants" WHERE "restaurants"."category_id" = ?[0m  [["category_id", 9]]
+[active_model_serializers]   ↳ app/controllers/categories_controller.rb:6:in `index'
+[active_model_serializers]   [1m[36mRestaurant Load (0.3ms)[0m  [1m[34mSELECT "restaurants".* FROM "restaurants" WHERE "restaurants"."category_id" = ?[0m  [["category_id", 10]]
+[active_model_serializers]   ↳ app/controllers/categories_controller.rb:6:in `index'
+[active_model_serializers]   [1m[36mRestaurant Load (0.2ms)[0m  [1m[34mSELECT "restaurants".* FROM "restaurants" WHERE "restaurants"."category_id" = ?[0m  [["category_id", 11]]
+[active_model_serializers]   ↳ app/controllers/categories_controller.rb:6:in `index'
+[active_model_serializers]   [1m[36mRestaurant Load (0.2ms)[0m  [1m[34mSELECT "restaurants".* FROM "restaurants" WHERE "restaurants"."category_id" = ?[0m  [["category_id", 15]]
+[active_model_serializers]   ↳ app/controllers/categories_controller.rb:6:in `index'
+[active_model_serializers]   [1m[36mRestaurant Load (0.4ms)[0m  [1m[34mSELECT "restaurants".* FROM "restaurants" WHERE "restaurants"."category_id" = ?[0m  [["category_id", 16]]
+[active_model_serializers]   ↳ app/controllers/categories_controller.rb:6:in `index'
+[active_model_serializers]   [1m[36mRestaurant Load (0.2ms)[0m  [1m[34mSELECT "restaurants".* FROM "restaurants" WHERE "restaurants"."category_id" = ?[0m  [["category_id", 17]]
+[active_model_serializers]   ↳ app/controllers/categories_controller.rb:6:in `index'
+[active_model_serializers]   [1m[36mRestaurant Load (0.2ms)[0m  [1m[34mSELECT "restaurants".* FROM "restaurants" WHERE "restaurants"."category_id" = ?[0m  [["category_id", 18]]
+[active_model_serializers]   ↳ app/controllers/categories_controller.rb:6:in `index'
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (105.59ms)
+Completed 200 OK in 110ms (Views: 105.3ms | ActiveRecord: 4.1ms | Allocations: 39024)
+
+
+Started GET "/categories" for ::1 at 2020-06-10 15:26:30 -0700
+Processing by CategoriesController#index as */*
+  [1m[36mCategory Load (0.5ms)[0m  [1m[34mSELECT "categories".* FROM "categories"[0m
+  ↳ app/controllers/categories_controller.rb:6:in `index'
+[active_model_serializers]   [1m[36mRestaurant Load (0.4ms)[0m  [1m[34mSELECT "restaurants".* FROM "restaurants" WHERE "restaurants"."category_id" = ?[0m  [["category_id", 2]]
+[active_model_serializers]   ↳ app/controllers/categories_controller.rb:6:in `index'
+[active_model_serializers]   [1m[36mRestaurant Load (0.3ms)[0m  [1m[34mSELECT "restaurants".* FROM "restaurants" WHERE "restaurants"."category_id" = ?[0m  [["category_id", 3]]
+[active_model_serializers]   ↳ app/controllers/categories_controller.rb:6:in `index'
+[active_model_serializers]   [1m[36mRestaurant Load (0.2ms)[0m  [1m[34mSELECT "restaurants".* FROM "restaurants" WHERE "restaurants"."category_id" = ?[0m  [["category_id", 4]]
+[active_model_serializers]   ↳ app/controllers/categories_controller.rb:6:in `index'
+[active_model_serializers]   [1m[36mRestaurant Load (0.3ms)[0m  [1m[34mSELECT "restaurants".* FROM "restaurants" WHERE "restaurants"."category_id" = ?[0m  [["category_id", 5]]
+[active_model_serializers]   ↳ app/controllers/categories_controller.rb:6:in `index'
+[active_model_serializers]   [1m[36mRestaurant Load (0.3ms)[0m  [1m[34mSELECT "restaurants".* FROM "restaurants" WHERE "restaurants"."category_id" = ?[0m  [["category_id", 6]]
+[active_model_serializers]   ↳ app/controllers/categories_controller.rb:6:in `index'
+[active_model_serializers]   [1m[36mRestaurant Load (0.3ms)[0m  [1m[34mSELECT "restaurants".* FROM "restaurants" WHERE "restaurants"."category_id" = ?[0m  [["category_id", 7]]
+[active_model_serializers]   ↳ app/controllers/categories_controller.rb:6:in `index'
+[active_model_serializers]   [1m[36mRestaurant Load (0.3ms)[0m  [1m[34mSELECT "restaurants".* FROM "restaurants" WHERE "restaurants"."category_id" = ?[0m  [["category_id", 8]]
+[active_model_serializers]   ↳ app/controllers/categories_controller.rb:6:in `index'
+[active_model_serializers]   [1m[36mRestaurant Load (0.3ms)[0m  [1m[34mSELECT "restaurants".* FROM "restaurants" WHERE "restaurants"."category_id" = ?[0m  [["category_id", 9]]
+[active_model_serializers]   ↳ app/controllers/categories_controller.rb:6:in `index'
+[active_model_serializers]   [1m[36mRestaurant Load (0.2ms)[0m  [1m[34mSELECT "restaurants".* FROM "restaurants" WHERE "restaurants"."category_id" = ?[0m  [["category_id", 10]]
+[active_model_serializers]   ↳ app/controllers/categories_controller.rb:6:in `index'
+[active_model_serializers]   [1m[36mRestaurant Load (0.2ms)[0m  [1m[34mSELECT "restaurants".* FROM "restaurants" WHERE "restaurants"."category_id" = ?[0m  [["category_id", 11]]
+[active_model_serializers]   ↳ app/controllers/categories_controller.rb:6:in `index'
+[active_model_serializers]   [1m[36mRestaurant Load (0.2ms)[0m  [1m[34mSELECT "restaurants".* FROM "restaurants" WHERE "restaurants"."category_id" = ?[0m  [["category_id", 15]]
+[active_model_serializers]   ↳ app/controllers/categories_controller.rb:6:in `index'
+[active_model_serializers]   [1m[36mRestaurant Load (0.2ms)[0m  [1m[34mSELECT "restaurants".* FROM "restaurants" WHERE "restaurants"."category_id" = ?[0m  [["category_id", 16]]
+[active_model_serializers]   ↳ app/controllers/categories_controller.rb:6:in `index'
+[active_model_serializers]   [1m[36mRestaurant Load (0.2ms)[0m  [1m[34mSELECT "restaurants".* FROM "restaurants" WHERE "restaurants"."category_id" = ?[0m  [["category_id", 17]]
+[active_model_serializers]   ↳ app/controllers/categories_controller.rb:6:in `index'
+[active_model_serializers]   [1m[36mRestaurant Load (0.2ms)[0m  [1m[34mSELECT "restaurants".* FROM "restaurants" WHERE "restaurants"."category_id" = ?[0m  [["category_id", 18]]
+[active_model_serializers]   ↳ app/controllers/categories_controller.rb:6:in `index'
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (95.83ms)
+Completed 200 OK in 102ms (Views: 97.1ms | ActiveRecord: 4.1ms | Allocations: 39021)
+
+

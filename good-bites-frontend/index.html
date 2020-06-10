@@ -34,8 +34,24 @@
             <div class="card">
                 <div class="list" data-id="1">
                     <span class="name">Create Restaurant</span>
-                    <br>
-                    <button data-category-id="1">Add Restaurant</button>
+                    <hr>
+                    <form id="new-restaurant-form" action="#">
+                        <div class="input-field">
+                            <label for="name">Name:</label>
+                            <input type="text" name="name" id="name">
+                            <br>
+                            <label for="description">Description:</label>
+                            <input type="text" name="description" id="description">
+                            <br>
+                            <label for="review">Review:</label>
+                            <input type="text" name="review" id="review">
+                            <br>
+                            <label for="category">Category ID:</label>
+                            <input type="text" name="category" id="category">
+                        </div>
+                        <br>
+                        <button data-restaurant-id="1">Add Restaurant</button>
+                    </form>
                     <ul>
                         <!-- <li>Jacey (Kakuna) <button class="release" data-pokemon-id="140">Release</button></li>
                         <li>Zachariah (Ditto) <button class="release" data-pokemon-id="141">Release</button></li>
