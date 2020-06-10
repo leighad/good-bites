@@ -20,6 +20,16 @@ class RestaurantsController < ApplicationController
         end
     end
 
+    def update
+        set_restaurant.update(restaurant_params)
+        render json: restaurant
+    end
+
+    def destroy
+        set_restaurant.delete
+        render json: {restaurant_id: restaurant.id}
+    end
+
     private
 
     def set_restaurant
