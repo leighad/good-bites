@@ -57,6 +57,10 @@ div.card {
     display: inline-block;
 }
 
+div.card-content {
+    font-size: 1.5em;
+}
+
 span.name {
     font-size: 1.4em;
     color: black;

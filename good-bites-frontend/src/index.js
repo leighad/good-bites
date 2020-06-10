@@ -9,11 +9,20 @@ document.addEventListener("DOMContentLoaded", function() {
     mountFormListener()
 })
 
+function addCategoriesToDOM(categories) {
+    categories.forEach(function(cat) {
+        renderCategory(htmlifyCategory(cat))
+    })
+}
+
 const loadCategories = () => {
     fetch(CATEGORIES_URL)
     .then(res => res.json())
-    .then(json => {
-        json.forEach(category => getCategoryData(category))
+    // .then(json => {
+    //     json.forEach(category => getCategoryData(category))
+    // })
+    .then(data => {
+        addCategoriesToDOM(data)
     })
 }
 
@@ -54,6 +63,7 @@ const htmlifyCategory = function(cat) {
                 <!-- <p>Category</p> -->
             </div>
         </div>
+        // <br>
     `
     )
 }
