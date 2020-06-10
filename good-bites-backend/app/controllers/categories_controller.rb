@@ -1,32 +1,40 @@
 class CategoriesController < ApplicationController
+    before_action :set_category, only: [:show, :update, :destroy]
+
     def index 
         categories = Category.all
         render json: categories, include: [:restaurants]
     end
 
     def show
-        category = Category.find_by_id(params[:id])
+        set_category
         render json: category, include: [:restaurants]
     end
 
     def create
-        category = Category.create(category_params)
-        render json: category, include: [:restaurants]
+        category = Category.new(category_params)
+        if category.save
+            render json: category, include: [:restaurants]
+        else
+            render json: { errors: category.errors.full_messages }
+        end
     end
 
     def update
-        category = Category.find_by_id(params[:id])
-        category.update(category_params)
+        set_category.update(category_params)
         render json: category, include: [:restaurants]
     end
 
     def destroy
-        category = Category.find_by_id(params[:id])
-        category.delete
+        set_category.delete
         render json: {category_id: category.id}
     end
 
     private
+
+    def set_category
+        category = Category.find_by_id(params[:id])
+    end
 
     def category_params
         params.require(:category).permit(:group)

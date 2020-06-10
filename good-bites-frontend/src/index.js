@@ -89,7 +89,7 @@ function mountFormListener() {
             headers: {
                 'Content-Type': 'application/json'
             },
-            body: JSON.stringify(categoryObject) // body data type must match "Content-Type" header
+            body: JSON.stringify({category:categoryObject}) // body data type must match "Content-Type" header
         })
         .then(res => res.json())
         .then((data) => {
