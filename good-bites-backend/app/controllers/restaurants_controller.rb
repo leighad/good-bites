@@ -2,7 +2,7 @@ class RestaurantsController < ApplicationController
     before_action :set_restaurant, only: [:show, :update, :destroy]
 
     def index 
-        restaurants = Restaurant.all
+        restaurants = Restaurant.alpha
         render json: restaurants
     end
 
