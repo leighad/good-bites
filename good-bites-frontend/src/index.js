@@ -56,8 +56,8 @@ const renderRestaurant = (restaurantHash) => {
     div.setAttribute("data-id", restaurantHash.id)
 
     h3.innerHTML = restaurantHash.name
-    h5.innerHTML = restaurantHash.description
-    h6.innerHTML = restaurantHash.review
+    h5.innerHTML = "Description: <br>" + restaurantHash.description
+    h6.innerHTML = "Review: <br>" + restaurantHash.review
     p.innerHTML = restaurantHash.category.group
 
     button.setAttribute("data-restaurant-id", restaurantHash.id)
