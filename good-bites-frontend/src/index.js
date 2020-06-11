@@ -32,8 +32,13 @@ document.addEventListener("DOMContentLoaded", function() {
 // }
 
 function addCategoriesToDOM(categories) {
+    document.querySelector("#category-list-container").innerHTML = ""
+    const selectCategory = document.querySelector("#category")
+    selectCategory.innerHTML = ""
+
     categories.forEach(function(cat) {
         renderCategory(htmlifyCategory(cat))
+        selectCategory.innerHTML += `<option value=${cat.id}>${cat.group}</option>`
     })
 }
 
@@ -164,8 +169,9 @@ function categoryFormListener() {
         })
         .then(res => res.json())
         .then((data) => {
-            const htmlCat = htmlifyCategory(data)
-            renderCategory(htmlCat)
+            // const htmlCat = htmlifyCategory(data)
+            // renderCategory(htmlCat)
+            loadCategories()
             // is this where we attach restaurant to category?
             clearCatForm(event)        
         })
