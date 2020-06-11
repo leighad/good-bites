@@ -102,7 +102,8 @@ li {
 
 button {
     font-size: .65em;
-    color: #fff;
+    font-weight: bold;
+    color: black;
     background-color: rgb(84, 188, 192);
     border-radius: 10px;
 }
