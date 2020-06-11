@@ -7,7 +7,7 @@ const main = document.querySelector("main")
 document.addEventListener("DOMContentLoaded", function() {
     loadCategories()
     loadRestaurants()
-    mountFormListener()
+    mountCategoryFormListener()
 })
 
 function addCategoriesToDOM(categories) {
@@ -102,7 +102,7 @@ const htmlifyCategory = function(cat) {
 //     )
 // }
 
-function clearForm(event) {
+function clearCatForm(event) {
     event.target.querySelector("#group").value = ""
 }
 
@@ -118,7 +118,7 @@ function renderCategory(category) {
 
 // }
 
-function mountFormListener() {
+function mountCategoryFormListener() {
     const categoryForm = document.getElementById("category-form-container")
     categoryForm.addEventListener("submit", function(event) {
         event.preventDefault()
@@ -135,9 +135,40 @@ function mountFormListener() {
         .then((data) => {
             const htmlCat = htmlifyCategory(data)
             renderCategory(htmlCat)
-            clearForm(event)        
+            clearCatForm(event)        
         })
 
+
+    })
+}
+
+function mountRestaurantFormListener() {
+    // const select = document.getElementById("select#category");
+    // select.innerHTML = Category.all
+    // let selectCategories = []
+    // for (let i = 0; i < categories.length; i++){
+    //     selectCategories.push(categories[i].group);
+    //   // now have option.text, option.value
+    // }
+
+    const restaurantForm = document.getElementById("restaurant-form-container")
+    restaurantForm.addEventListener("submit", function(event) {
+        event.preventDefault()
+        const restaurantObject = getRestaurantData(event)
+
+        fetch(RESTAURANTS_URL, {
+            method: 'POST', // *GET, POST, PUT, DELETE, etc.
+            headers: {
+                'Content-Type': 'application/json'
+            },
+            body: JSON.stringify({restaurant:restaurantObject}) // body data type must match "Content-Type" header
+        })
+        .then(res => res.json())
+        .then((data) => {
+            const htmlRest = htmlifyRestaurant(data)
+            renderCategory(htmlRest)
+            // clearRestForm(event)        
+        })
 
     })
 }
