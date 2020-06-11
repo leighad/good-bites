@@ -1,5 +1,9 @@
-body {
+* {
     font-family: 'HelveticaNeue-Light', 'Helvetica Neue sans-serif';
+}
+
+body {
+    /* font-family: 'HelveticaNeue-Light', 'Helvetica Neue sans-serif'; */
     font-weight: 300;
     line-height: 1.6em;
     font-size: 1.3em;
@@ -42,7 +46,7 @@ main {
     text-align: center;
 }
 
-/* div#category_container {
+/* div#category-container {
     height: 100px;
     width: 400px;
     display: inline-block;
@@ -75,10 +79,19 @@ span.create-category-info {
     font-size: 1.45em;
 }
 
+h3, h4, h5 {
+    font-weight: normal;
+}
+
+h6 {
+    font-weight: bold;
+}
+
 p {
     font-size: 1.2em;
     color: black;
-    font-family: Helvetica;
+    /* font-family: Helvetica; */
+    font-style: italic;
 }
 
 li {
