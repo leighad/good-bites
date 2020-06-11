@@ -55,8 +55,8 @@ main {
 div.card {
     text-align-last: center;
     background-color: #eeeeee;
-    height: 300px;
-    width: 400px;
+    height: 400px;
+    width: 350px;
     box-shadow: 15px 15px lightgrey;
     padding: 10px;
     border-radius: 10px;
@@ -65,7 +65,7 @@ div.card {
 
 div.card-content {
     font-size: 1.5em;
-    display: inline-block;
+    /* display: inline-block; */
 
 }
 

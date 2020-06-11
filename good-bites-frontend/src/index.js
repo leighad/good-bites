@@ -52,7 +52,7 @@ const renderRestaurant = (restaurantHash) => {
     // const li = document.createElement("li")
 
 
-    div.setAttribute("class", "list")
+    div.setAttribute("id", "restaurant-container")
     div.setAttribute("data-id", restaurantHash.id)
 
     h3.innerHTML = restaurantHash.name
