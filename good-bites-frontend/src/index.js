@@ -7,8 +7,29 @@ const main = document.querySelector("main")
 document.addEventListener("DOMContentLoaded", function() {
     loadCategories()
     loadRestaurants()
-    mountCategoryFormListener()
+    categoriesClickListener()
+    categoryFormListener()
 })
+
+// class Category {
+//     constructor(obj) {
+//         this.id = obj.id
+//         this.group = obj.group
+//         this.restaurants = obj.restaurants
+
+//     }
+// }
+
+// class Restaurant {
+//     constructor(obj) {
+//         this.id = obj.id
+//         this.name = obj.name
+//         this.description = obj.description
+//         this.review = obj.review
+//         this.categoryId = obj.categoryId
+
+//     }
+// }
 
 function addCategoriesToDOM(categories) {
     categories.forEach(function(cat) {
@@ -33,12 +54,27 @@ const loadCategories = () => {
     })
 }
 
+function categoriesClickListener() {
+    const categories = document.querySelector("#category-list-container")
+    categories.addEventListener("click", function(event) {
+        event.preventDefault()
+        // loadCategoryRestaurants()
+    })
+
+}
+
 const loadRestaurants = () => {
     fetch(RESTAURANTS_URL)
     .then(res => res.json())
     .then(json => {
         json.forEach(restaurant => renderRestaurant(restaurant))
     })
+}
+
+function renderCategory(category) {
+    const categoryList = document.querySelector("#category-list-container")
+    categoryList.innerHTML += category
+
 }
 
 const renderRestaurant = (restaurantHash) => {
@@ -106,11 +142,6 @@ function clearCatForm(event) {
     event.target.querySelector("#group").value = ""
 }
 
-function renderCategory(category) {
-    const categoryList = document.querySelector("#category-list-container")
-    categoryList.innerHTML += category
-
-}
 
 // function renderRestaurant(restaurant) {
 //     const restaurantList = document.querySelector("#restaurant-container")
@@ -118,7 +149,7 @@ function renderCategory(category) {
 
 // }
 
-function mountCategoryFormListener() {
+function categoryFormListener() {
     const categoryForm = document.getElementById("category-form-container")
     categoryForm.addEventListener("submit", function(event) {
         event.preventDefault()
@@ -135,6 +166,7 @@ function mountCategoryFormListener() {
         .then((data) => {
             const htmlCat = htmlifyCategory(data)
             renderCategory(htmlCat)
+            // is this where we attach restaurant to category?
             clearCatForm(event)        
         })
 
@@ -142,7 +174,7 @@ function mountCategoryFormListener() {
     })
 }
 
-function mountRestaurantFormListener() {
+function restaurantFormListener() {
     // const select = document.getElementById("select#category");
     // select.innerHTML = Category.all
     // let selectCategories = []
