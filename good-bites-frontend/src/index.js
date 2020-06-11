@@ -83,15 +83,9 @@ function getCategoryData(event) {
 
 const htmlifyCategory = function(cat) {
     return (`
-        <div class="card">
-            <div class="card-content">
                 <span class="card-group">${cat.group}</span>
-                <!-- <p>Category</p> -->
-            </div>
-        </div>
-        // <br>
-    `
-    )
+                <br>
+    `)
 }
 
 // const htmlifyRestaurant = function(rest) {
@@ -113,7 +107,7 @@ function clearForm(event) {
 }
 
 function renderCategory(category) {
-    const categoryList = document.querySelector("#category-container")
+    const categoryList = document.querySelector("#category-list-container")
     categoryList.innerHTML += category
 
 }
