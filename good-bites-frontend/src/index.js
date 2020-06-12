@@ -122,8 +122,6 @@ const renderRestaurant = (restaurantHash) => {
     div.appendChild(h6)
     div.appendChild(p)
     div.appendChild(button)
-    // div.appendChild(ul)
-    // div.appendChild(li)
     main.appendChild(div)
 }
 
@@ -172,7 +170,7 @@ function clearRestForm(event) {
     event.target.querySelector("#name").value = ""
     event.target.querySelector("#description").value = ""
     event.target.querySelector("#review").value = ""
-    event.target.querySelector("#category").value = ""
+    // event.target.querySelector("#category").value = ""
 }
 
 // function renderRestaurant(restaurant) {
