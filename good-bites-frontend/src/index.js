@@ -11,6 +11,10 @@ document.addEventListener("DOMContentLoaded", function() {
     categoryFormListener()
 })
 
+const categoryList = document.querySelector("#category-list-container")
+const selectCategory = document.querySelector("#category")
+
+
 // class Category {
 //     constructor(obj) {
 //         this.id = obj.id
@@ -32,8 +36,8 @@ document.addEventListener("DOMContentLoaded", function() {
 // }
 
 function addCategoriesToDOM(categories) {
-    document.querySelector("#category-list-container").innerHTML = ""
-    const selectCategory = document.querySelector("#category")
+    categoryList.innerHTML = ""
+    // const selectCategory = document.querySelector("#category")
     selectCategory.innerHTML = ""
 
     categories.forEach(function(cat) {
@@ -60,8 +64,7 @@ const loadCategories = () => {
 }
 
 function categoriesClickListener() {
-    const categories = document.querySelector("#category-list-container")
-    categories.addEventListener("click", function(event) {
+    categoryList.addEventListener("click", function(event) {
         event.preventDefault()
         // loadCategoryRestaurants()
     })
@@ -77,7 +80,6 @@ const loadRestaurants = () => {
 }
 
 function renderCategory(category) {
-    const categoryList = document.querySelector("#category-list-container")
     categoryList.innerHTML += category
 
 }
