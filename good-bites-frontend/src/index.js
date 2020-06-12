@@ -47,8 +47,20 @@ function addCategoriesToDOM(categories) {
 }
 
 function addRestaurantsToDOM(restaurants) {
+    // const restaurantList = document.querySelector("#restaurant-container")
+    // restaurantList.innerHTML = ""
+    // const selectName = document.querySelector("#name").value 
+    // const selectDescription = document.querySelector("#description").value 
+    // const selectReview = document.querySelector("#review").value 
+    // const selectCategory = document.querySelector("#category").value 
+
     restaurants.forEach(function(rest) {
         renderRestaurant(htmlifyRestaurant(rest))
+        // selectName.innerHTML += `<option value=${rest.id}>${rest.name}</option>`
+        // selectDescription.innerHTML += `<option value=${rest.id}>${rest.description}</option>`
+        // selectReview.innerHTML += `<option value=${rest.id}>${rest.review}</option>`
+        // selectCategory.innerHTML += `<option value=${rest.category_id}>${rest.category.group}</option>`
+
     })
 }
 
@@ -91,8 +103,6 @@ const renderRestaurant = (restaurantHash) => {
     const h6 = document.createElement("h6")
     const p = document.createElement("p")
     const button = document.createElement("button")
-    // const ul = document.createElement("ul")
-    // const li = document.createElement("li")
 
 
     div.setAttribute("id", "restaurant-container")
@@ -115,7 +125,6 @@ const renderRestaurant = (restaurantHash) => {
     // div.appendChild(ul)
     // div.appendChild(li)
     main.appendChild(div)
-
 }
 
 function getCategoryData(event) {
@@ -126,34 +135,49 @@ function getCategoryData(event) {
 
 const htmlifyCategory = function(cat) {
     return (`
-                <span class="card-group">${cat.group}</span>
-                <br>
+            <span class="card-group">${cat.group}</span>
+            <br>
     `)
 }
 
-// const htmlifyRestaurant = function(rest) {
-//     return (`
-//         <div class="list">
-//             <div class="list-content">
-//                 <span class="list-name">${rest.name}</span>
-//                 <span class="list-name">${rest.description}</span>
-//                 <span class="list-name">${rest.review}</span>
-//                 <span class="list-name">${rest.category.group}</span>
-//             </div>
-//         </div>
-//     `
-//     )
-// }
+function getRestaurantData(event) { 
+    debugger 
+    return {
+        name: event.target.querySelector("#name").value,
+        description: event.target.querySelector("#description").value,
+        review: event.target.querySelector("#review").value,
+        category_id: event.target.querySelector("#category").value
+    }
+}
+
+const htmlifyRestaurant = function(rest) {
+    return (`
+        <div class="list">
+            <div class="list-content">
+                <span class="list-name">${rest.name}</span>
+                <span class="list-name">${rest.description}</span>
+                <span class="list-name">${rest.review}</span>
+                <span class="list-name">${rest.category.group}</span>
+            </div>
+        </div>
+    `
+    )
+}
 
 function clearCatForm(event) {
     event.target.querySelector("#group").value = ""
 }
 
+function clearRestForm(event) {
+    event.target.querySelector("#name").value = ""
+    event.target.querySelector("#description").value = ""
+    event.target.querySelector("#review").value = ""
+    event.target.querySelector("#category").value = ""
+}
 
 // function renderRestaurant(restaurant) {
 //     const restaurantList = document.querySelector("#restaurant-container")
 //     restaurantList.innerHTML += restaurant
-
 // }
 
 function categoryFormListener() {
@@ -183,14 +207,6 @@ function categoryFormListener() {
 }
 
 function restaurantFormListener() {
-    // const select = document.getElementById("select#category");
-    // select.innerHTML = Category.all
-    // let selectCategories = []
-    // for (let i = 0; i < categories.length; i++){
-    //     selectCategories.push(categories[i].group);
-    //   // now have option.text, option.value
-    // }
-
     const restaurantForm = document.getElementById("restaurant-form-container")
     restaurantForm.addEventListener("submit", function(event) {
         event.preventDefault()
@@ -206,10 +222,11 @@ function restaurantFormListener() {
         .then(res => res.json())
         .then((data) => {
             const htmlRest = htmlifyRestaurant(data)
-            renderCategory(htmlRest)
-            // clearRestForm(event)        
+            renderRestaurant(htmlRest)
+
+            // renderCategory(htmlRest)
+            clearRestForm(event)        
         })
 
     })
 }
-
