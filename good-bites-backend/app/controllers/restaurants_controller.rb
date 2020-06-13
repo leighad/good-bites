@@ -12,7 +12,9 @@ class RestaurantsController < ApplicationController
     end
 
     def create
-        restaurant = Restaurant.new(restaurant_params)
+        # restaurant = Restaurant.new(restaurant_params)
+        restaurant = Category.restaurants.build(restaurant_params)
+
         if restaurant.save
             render json: restaurant
         else
