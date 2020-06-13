@@ -14,37 +14,28 @@ document.addEventListener("DOMContentLoaded", function() {
 const categoryList = document.querySelector("#category-list-container")
 const selectCategory = document.querySelector("#category")
 
+// function addCategoriesToDOM(categories) {
+//     categoryList.innerHTML = ""
+//     selectCategory.innerHTML = ""
 
-// class Category {
-//     constructor(obj) {
-//         this.id = obj.id
-//         this.group = obj.group
-//         this.restaurants = obj.restaurants
-
-//     }
-// }
-
-// class Restaurant {
-//     constructor(obj) {
-//         this.id = obj.id
-//         this.name = obj.name
-//         this.description = obj.description
-//         this.review = obj.review
-//         this.categoryId = obj.categoryId
-
-//     }
+//     categories.forEach(function(cat) {
+//         renderCategory(htmlifyCategory(cat))
+//         selectCategory.innerHTML += `<option value=${cat.id}>${cat.group}</option>`
+//     })
 // }
 
 function addCategoriesToDOM(categories) {
     categoryList.innerHTML = ""
-    // const selectCategory = document.querySelector("#category")
     selectCategory.innerHTML = ""
 
     categories.forEach(function(cat) {
+        const catObj = new Category(cat)
+        debugger 
         renderCategory(htmlifyCategory(cat))
         selectCategory.innerHTML += `<option value=${cat.id}>${cat.group}</option>`
     })
 }
+
 
 function addRestaurantsToDOM(restaurants) {
     // const restaurantList = document.querySelector("#restaurant-container")
@@ -91,10 +82,10 @@ const loadRestaurants = () => {
     })
 }
 
-function renderCategory(category) {
-    categoryList.innerHTML += category
+// function renderCategory(category) {
+//     categoryList.innerHTML += category
 
-}
+// }
 
 const renderRestaurant = (restaurantHash) => {
     const div = document.createElement("div")
@@ -131,12 +122,12 @@ function getCategoryData(event) {
     }
 }
 
-const htmlifyCategory = function(cat) {
-    return (`
-            <span class="card-group">${cat.group}</span>
-            <br>
-    `)
-}
+// const htmlifyCategory = function(cat) {
+//     return (`
+//             <span class="card-group">${cat.group}</span>
+//             <br>
+//     `)
+// }
 
 function getRestaurantData(event) { 
     debugger 
