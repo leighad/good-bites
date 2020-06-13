@@ -6,6 +6,7 @@ const main = document.querySelector("main")
 
 document.addEventListener("DOMContentLoaded", function() {
     loadCategories()
+    // Category.loadCategories()
     loadRestaurants()
     categoriesClickListener()
     categoryFormListener()
@@ -14,27 +15,30 @@ document.addEventListener("DOMContentLoaded", function() {
 const categoryList = document.querySelector("#category-list-container")
 const selectCategory = document.querySelector("#category")
 
-// function addCategoriesToDOM(categories) {
-//     categoryList.innerHTML = ""
-//     selectCategory.innerHTML = ""
-
-//     categories.forEach(function(cat) {
-//         renderCategory(htmlifyCategory(cat))
-//         selectCategory.innerHTML += `<option value=${cat.id}>${cat.group}</option>`
-//     })
-// }
-
+//ORIGINAL CODE
 function addCategoriesToDOM(categories) {
     categoryList.innerHTML = ""
     selectCategory.innerHTML = ""
 
     categories.forEach(function(cat) {
-        const catObj = new Category(cat)
-        debugger 
         renderCategory(htmlifyCategory(cat))
         selectCategory.innerHTML += `<option value=${cat.id}>${cat.group}</option>`
     })
 }
+
+
+//NEW BROKEN CODE
+// function addCategoriesToDOM(categories) {
+//     categoryList.innerHTML = ""
+//     selectCategory.innerHTML = ""
+
+//     categories.forEach(function(cat) {
+//         const catObj = new Category(cat)
+//         debugger 
+//         renderCategory(htmlifyCategory(cat))
+//         selectCategory.innerHTML += `<option value=${cat.id}>${cat.group}</option>`
+//     })
+// }
 
 
 function addRestaurantsToDOM(restaurants) {
@@ -54,6 +58,7 @@ function addRestaurantsToDOM(restaurants) {
 
     })
 }
+
 
 const loadCategories = () => {
     fetch(CATEGORIES_URL)
@@ -82,10 +87,11 @@ const loadRestaurants = () => {
     })
 }
 
-// function renderCategory(category) {
-//     categoryList.innerHTML += category
+//comment out
+function renderCategory(category) {
+    categoryList.innerHTML += category
 
-// }
+}
 
 const renderRestaurant = (restaurantHash) => {
     const div = document.createElement("div")
@@ -122,12 +128,13 @@ function getCategoryData(event) {
     }
 }
 
-// const htmlifyCategory = function(cat) {
-//     return (`
-//             <span class="card-group">${cat.group}</span>
-//             <br>
-//     `)
-// }
+//comment out
+const htmlifyCategory = function(cat) {
+    return (`
+            <span class="card-group">${cat.group}</span>
+            <br>
+    `)
+}
 
 function getRestaurantData(event) { 
     debugger 
