@@ -10,6 +10,7 @@ document.addEventListener("DOMContentLoaded", function() {
     loadRestaurants()
     categoriesClickListener()
     categoryFormListener()
+    restaurantFormListener()
 })
 
 const categoryList = document.querySelector("#category-list-container")
@@ -42,19 +43,19 @@ function addCategoriesToDOM(categories) {
 
 
 function addRestaurantsToDOM(restaurants) {
-    // const restaurantList = document.querySelector("#restaurant-container")
-    // restaurantList.innerHTML = ""
-    // const selectName = document.querySelector("#name").value 
-    // const selectDescription = document.querySelector("#description").value 
-    // const selectReview = document.querySelector("#review").value 
-    // const selectCategory = document.querySelector("#category").value 
+    const restaurantList = document.querySelector("#restaurant-container")
+    restaurantList.innerHTML = ""
+    const selectName = document.querySelector("#name").value 
+    const selectDescription = document.querySelector("#description").value 
+    const selectReview = document.querySelector("#review").value 
+    const selectCategory = document.querySelector("#category").value 
 
     restaurants.forEach(function(rest) {
         renderRestaurant(htmlifyRestaurant(rest))
-        // selectName.innerHTML += `<option value=${rest.id}>${rest.name}</option>`
-        // selectDescription.innerHTML += `<option value=${rest.id}>${rest.description}</option>`
-        // selectReview.innerHTML += `<option value=${rest.id}>${rest.review}</option>`
-        // selectCategory.innerHTML += `<option value=${rest.category_id}>${rest.category.group}</option>`
+        selectName.innerHTML += `<option value=${rest.id}>${rest.name}</option>`
+        selectDescription.innerHTML += `<option value=${rest.id}>${rest.description}</option>`
+        selectReview.innerHTML += `<option value=${rest.id}>${rest.review}</option>`
+        selectCategory.innerHTML += `<option value=${rest.category_id}>${rest.category.group}</option>`
 
     })
 }
@@ -84,6 +85,9 @@ const loadRestaurants = () => {
     .then(res => res.json())
     .then(json => {
         json.forEach(restaurant => renderRestaurant(restaurant))
+    })
+    .then(data => {
+        addRestaurantsToDOM(data)
     })
 }
 
@@ -168,13 +172,7 @@ function clearRestForm(event) {
     event.target.querySelector("#name").value = ""
     event.target.querySelector("#description").value = ""
     event.target.querySelector("#review").value = ""
-    // event.target.querySelector("#category").value = ""
 }
-
-// function renderRestaurant(restaurant) {
-//     const restaurantList = document.querySelector("#restaurant-container")
-//     restaurantList.innerHTML += restaurant
-// }
 
 function categoryFormListener() {
     const categoryForm = document.getElementById("category-form-container")
@@ -183,18 +181,18 @@ function categoryFormListener() {
         const categoryObject = getCategoryData(event)
 
         fetch(CATEGORIES_URL, {
-            method: 'POST', // *GET, POST, PUT, DELETE, etc.
+            method: 'POST', 
             headers: {
                 'Content-Type': 'application/json'
             },
-            body: JSON.stringify({category:categoryObject}) // body data type must match "Content-Type" header
+            body: JSON.stringify({category:categoryObject}) 
+            // body data type must match "Content-Type" header
         })
         .then(res => res.json())
         .then((data) => {
             // const htmlCat = htmlifyCategory(data)
             // renderCategory(htmlCat)
             loadCategories()
-            // is this where we attach restaurant to category?
             clearCatForm(event)        
         })
 
@@ -209,18 +207,18 @@ function restaurantFormListener() {
         const restaurantObject = getRestaurantData(event)
 
         fetch(RESTAURANTS_URL, {
-            method: 'POST', // *GET, POST, PUT, DELETE, etc.
+            method: 'POST', 
             headers: {
                 'Content-Type': 'application/json'
             },
-            body: JSON.stringify({restaurant:restaurantObject}) // body data type must match "Content-Type" header
+            body: JSON.stringify({restaurant:restaurantObject}) 
+            // body data type must match "Content-Type" header
         })
         .then(res => res.json())
         .then((data) => {
-            const htmlRest = htmlifyRestaurant(data)
-            renderRestaurant(htmlRest)
-
-            // renderCategory(htmlRest)
+            // const htmlRest = htmlifyRestaurant(data)
+            // renderRestaurant(htmlRest)
+            loadRestaurants()
             clearRestForm(event)        
         })
 
