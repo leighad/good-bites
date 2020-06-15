@@ -9,8 +9,8 @@ document.addEventListener("DOMContentLoaded", function() {
     loadCategories()
     // Category.loadCategories()
     // loadRestaurants()
-    // categoriesClickListener()
     restaurantsClickListener()
+    categoriesClickListener()
     categoryFormListener()
     restaurantFormListener()
 })
@@ -20,7 +20,6 @@ const selectCategory = document.querySelector("#category")
 
 const restaurantList = document.querySelector("#restaurant-container")
 
-//ORIGINAL CODE
 function addCategoriesToDOM(categories) {
     categoryList.innerHTML = ""
     selectCategory.innerHTML = ""
@@ -59,12 +58,15 @@ const loadCategories = () => {
     })
 }
 
-// function categoriesClickListener() {
-//     categoryList.addEventListener("click", function(event) {
-//         event.preventDefault()
-//         // loadCategoryRestaurants()
-//     })
-// }
+function categoriesClickListener() {
+    const allCategories = document.querySelectorAll(".card-group");
+    allCategories.forEach(function(cat){
+        cat.addEventListener("click", function(event) {
+            event.preventDefault()
+            // loadCategoryRestaurants()
+        })
+    }) 
+}
 
 function restaurantsClickListener() {
     const allRestaurants = document.getElementById("all-restaurants");
