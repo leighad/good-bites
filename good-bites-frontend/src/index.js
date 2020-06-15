@@ -1,20 +1,24 @@
 const BASE_URL = "http://localhost:3000"
 const CATEGORIES_URL = `${BASE_URL}/categories`
 const RESTAURANTS_URL = `${BASE_URL}/restaurants`
+// const RESTAURANT_URL = `${BASE_URL}/restaurants/${this.id}`
 
 const main = document.querySelector("main")
 
 document.addEventListener("DOMContentLoaded", function() {
     loadCategories()
     // Category.loadCategories()
-    loadRestaurants()
-    categoriesClickListener()
+    // loadRestaurants()
+    // categoriesClickListener()
+    restaurantsClickListener()
     categoryFormListener()
     restaurantFormListener()
 })
 
 const categoryList = document.querySelector("#category-list-container")
 const selectCategory = document.querySelector("#category")
+
+const restaurantList = document.querySelector("#restaurant-container")
 
 //ORIGINAL CODE
 function addCategoriesToDOM(categories) {
@@ -27,23 +31,7 @@ function addCategoriesToDOM(categories) {
     })
 }
 
-
-//NEW BROKEN CODE
-// function addCategoriesToDOM(categories) {
-//     categoryList.innerHTML = ""
-//     selectCategory.innerHTML = ""
-
-//     categories.forEach(function(cat) {
-//         const catObj = new Category(cat)
-//         debugger 
-//         renderCategory(htmlifyCategory(cat))
-//         selectCategory.innerHTML += `<option value=${cat.id}>${cat.group}</option>`
-//     })
-// }
-
-
 function addRestaurantsToDOM(restaurants) {
-    const restaurantList = document.querySelector("#restaurant-container")
     restaurantList.innerHTML = ""
     const selectName = document.querySelector("#name").value 
     const selectDescription = document.querySelector("#description").value 
@@ -60,7 +48,6 @@ function addRestaurantsToDOM(restaurants) {
     })
 }
 
-
 const loadCategories = () => {
     fetch(CATEGORIES_URL)
     .then(res => res.json())
@@ -72,12 +59,19 @@ const loadCategories = () => {
     })
 }
 
-function categoriesClickListener() {
-    categoryList.addEventListener("click", function(event) {
-        event.preventDefault()
-        // loadCategoryRestaurants()
-    })
+// function categoriesClickListener() {
+//     categoryList.addEventListener("click", function(event) {
+//         event.preventDefault()
+//         // loadCategoryRestaurants()
+//     })
+// }
 
+function restaurantsClickListener() {
+    const allRestaurants = document.getElementById("all-restaurants");
+    allRestaurants.addEventListener("click", function(event) {
+        event.preventDefault()
+        loadRestaurants()
+    })
 }
 
 const loadRestaurants = () => {
@@ -90,6 +84,14 @@ const loadRestaurants = () => {
         addRestaurantsToDOM(data)
     })
 }
+
+// const loadRestaurant = () => {
+//     fetch (RESTAURANT_URL)
+//     .then(res => res.json())
+//     .then(data => {
+
+//     })
+// }
 
 //comment out
 function renderCategory(category) {
@@ -172,6 +174,7 @@ function clearRestForm(event) {
     event.target.querySelector("#name").value = ""
     event.target.querySelector("#description").value = ""
     event.target.querySelector("#review").value = ""
+    event.target.querySelector("#category").value = ""
 }
 
 function categoryFormListener() {
@@ -218,7 +221,7 @@ function restaurantFormListener() {
         .then((data) => {
             // const htmlRest = htmlifyRestaurant(data)
             // renderRestaurant(htmlRest)
-            loadRestaurants()
+            loadRestaurants(data)
             clearRestForm(event)        
         })
 
