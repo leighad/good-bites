@@ -17,7 +17,6 @@ document.addEventListener("DOMContentLoaded", function() {
 
 const categoryList = document.querySelector("#category-list-container")
 const selectCategory = document.querySelector("#category")
-
 const restaurantList = document.querySelector("#restaurant-container")
 
 function addCategoriesToDOM(categories) {
@@ -43,7 +42,6 @@ function addRestaurantsToDOM(restaurants) {
         selectDescription.innerHTML += `<option value=${rest.id}>${rest.description}</option>`
         selectReview.innerHTML += `<option value=${rest.id}>${rest.review}</option>`
         selectCategory.innerHTML += `<option value=${rest.category_id}>${rest.category.group}</option>`
-
     })
 }
 
@@ -58,15 +56,16 @@ const loadCategories = () => {
     })
 }
 
-function categoriesClickListener() {
-    const allCategories = document.querySelectorAll(".card-group");
-    allCategories.forEach(function(cat){
-        cat.addEventListener("click", function(event) {
-            event.preventDefault()
-            // loadCategoryRestaurants()
-        })
-    }) 
-}
+// NOT CURRENTLY WORKING
+// function categoriesClickListener() {
+//     const allCategories = document.querySelectorAll(".card-group");
+//     allCategories.forEach(function(cat){
+//         cat.addEventListener("click", function(event) {
+//             event.preventDefault()
+//             // loadCategoryRestaurants()
+//         })
+//     }) 
+// }
 
 function restaurantsClickListener() {
     const allRestaurants = document.getElementById("all-restaurants");
@@ -95,10 +94,8 @@ const loadRestaurants = () => {
 //     })
 // }
 
-//comment out
 function renderCategory(category) {
     categoryList.innerHTML += category
-
 }
 
 const renderRestaurant = (restaurantHash) => {
@@ -108,7 +105,6 @@ const renderRestaurant = (restaurantHash) => {
     const h6 = document.createElement("h6")
     const p = document.createElement("p")
     const button = document.createElement("button")
-
 
     div.setAttribute("id", "restaurant-container")
     div.setAttribute("data-id", restaurantHash.id)
@@ -136,7 +132,6 @@ function getCategoryData(event) {
     }
 }
 
-//comment out
 const htmlifyCategory = function(cat) {
     return (`
             <span class="card-group">${cat.group}</span>
@@ -145,7 +140,6 @@ const htmlifyCategory = function(cat) {
 }
 
 function getRestaurantData(event) { 
-    debugger 
     return {
         name: event.target.querySelector("#name").value,
         description: event.target.querySelector("#description").value,
