@@ -3,23 +3,23 @@ const CATEGORIES_URL = `${BASE_URL}/categories`
 const RESTAURANTS_URL = `${BASE_URL}/restaurants`
 // const RESTAURANT_URL = `${BASE_URL}/restaurants/${this.id}`
 
-const main = document.querySelector("main")
+// const main = document.querySelector("main")
 
 document.addEventListener("DOMContentLoaded", function() {
     Category.loadCategories()
     
     // loadRestaurants()
-    restaurantsClickListener()
+    Restaurant.restaurantsClickListener()
     // categoriesClickListener()
 
     Category.categoryFormListener()
     // categoryFormListener()
-    restaurantFormListener()
+    Restaurant.restaurantFormListener()
 })
 
 // const categoryList = document.querySelector("#category-list-container")
 // const selectCategory = document.querySelector("#category")
-const restaurantList = document.querySelector("#restaurant-container")
+// const restaurantList = document.querySelector("#restaurant-container")
 
 //ORIGINAL CODE******
 // function addCategoriesToDOM(categories) {
@@ -73,24 +73,26 @@ const restaurantList = document.querySelector("#restaurant-container")
 //     }) 
 // }
 
-function restaurantsClickListener() {
-    const allRestaurants = document.getElementById("all-restaurants");
-    allRestaurants.addEventListener("click", function(event) {
-        event.preventDefault()
-        loadRestaurants()
-    })
-}
+//ORIGINAL CODE
+// function restaurantsClickListener() {
+//     const allRestaurants = document.getElementById("all-restaurants");
+//     allRestaurants.addEventListener("click", function(event) {
+//         event.preventDefault()
+//         loadRestaurants()
+//     })
+// }
 
-const loadRestaurants = () => {
-    fetch(RESTAURANTS_URL)
-    .then(res => res.json())
-    // .then(json => {
-    //     json.forEach(restaurant => renderRestaurant(restaurant))
-    // })
-    .then(data => {
-        addRestaurantsToDOM(data)
-    })
-}
+//ORIGINAL CODE
+// const loadRestaurants = () => {
+//     fetch(RESTAURANTS_URL)
+//     .then(res => res.json())
+//     // .then(json => {
+//     //     json.forEach(restaurant => renderRestaurant(restaurant))
+//     // })
+//     .then(data => {
+//         addRestaurantsToDOM(data)
+//     })
+// }
 
 // const loadRestaurant = () => {
 //     fetch (RESTAURANT_URL)
@@ -151,14 +153,15 @@ const loadRestaurants = () => {
 //     `)
 // }
 
-function getRestaurantData(event) { 
-    return {
-        name: event.target.querySelector("#name").value,
-        description: event.target.querySelector("#description").value,
-        review: event.target.querySelector("#review").value,
-        category_id: event.target.querySelector("#category").value
-    }
-}
+//ORIGINAL CODE
+// function getRestaurantData(event) { 
+//     return {
+//         name: event.target.querySelector("#name").value,
+//         description: event.target.querySelector("#description").value,
+//         review: event.target.querySelector("#review").value,
+//         category_id: event.target.querySelector("#category").value
+//     }
+// }
 
 // const htmlifyRestaurant = function(rest) {
 //     return (`
@@ -180,12 +183,13 @@ function getRestaurantData(event) {
 //     event.target.querySelector("#group").value = ""
 // }
 
-function clearRestForm(event) {
-    event.target.querySelector("#name").value = ""
-    event.target.querySelector("#description").value = ""
-    event.target.querySelector("#review").value = ""
-    event.target.querySelector("#category").value = "4"
-}
+//ORIGINAL CODE
+// function clearRestForm(event) {
+//     event.target.querySelector("#name").value = ""
+//     event.target.querySelector("#description").value = ""
+//     event.target.querySelector("#review").value = ""
+//     event.target.querySelector("#category").value = "4"
+// }
 
 //ORIGINAL CODE******
 // function categoryFormListener() {
@@ -212,28 +216,28 @@ function clearRestForm(event) {
 //     })
 // }
 
-function restaurantFormListener() {
-    const restaurantForm = document.getElementById("restaurant-form-container")
-    restaurantForm.addEventListener("submit", function(event) {
-        event.preventDefault()
-        const restaurantObject = getRestaurantData(event)
+//ORIGINAL CODE 
+// function restaurantFormListener() {
+//     const restaurantForm = document.getElementById("restaurant-form-container")
+//     restaurantForm.addEventListener("submit", function(event) {
+//         event.preventDefault()
+//         const restaurantObject = getRestaurantData(event)
 
-        fetch(RESTAURANTS_URL, {
-            method: 'POST', 
-            headers: {
-                'Content-Type': 'application/json'
-            },
-            body: JSON.stringify({restaurant:restaurantObject}) 
-            // body data type must match "Content-Type" header
-        })
-        .then(res => res.json())
-        .then((data) => {
-            // const htmlRest = htmlifyRestaurant(data)
-            // renderRestaurant(htmlRest)
+//         fetch(RESTAURANTS_URL, {
+//             method: 'POST', 
+//             headers: {
+//                 'Content-Type': 'application/json'
+//             },
+//             body: JSON.stringify({restaurant:restaurantObject}) 
+//             // body data type must match "Content-Type" header
+//         })
+//         .then(res => res.json())
+//         .then((data) => {
+//             // const htmlRest = htmlifyRestaurant(data)
+//             // renderRestaurant(htmlRest)
 
-            loadRestaurants()
-            clearRestForm(event)        
-        })
-    })
-
-}
+//             loadRestaurants()
+//             clearRestForm(event)        
+//         })
+//     })
+// }
