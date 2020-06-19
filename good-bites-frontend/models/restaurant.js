@@ -1,14 +1,14 @@
 class Restaurant {
     // static restaurantsUrl = "http://localhost:3000/restaurants"
-
     static all = []
 
-    constructor({id, name, description, review, category_id}) {
-        this.id = id
-        this.name = name
-        this.description = description
-        this.review = review
-        this.category_id = category_id
+    constructor({id, name, description, review, category_id, category}) {
+        this.id = id;
+        this.name = name;
+        this.description = description;
+        this.review = review;
+        this.category_id = category_id;
+        this.category = category;
         Restaurant.all.push(this)
     }
 
@@ -21,15 +21,14 @@ class Restaurant {
         const h6 = document.createElement("h6")
         const p = document.createElement("p")
         const button = document.createElement("button")
-    
+    // debugger
         // div.setAttribute("id", "restaurant-container")
         div.setAttribute("data-id", restaurantHash.id)
     
         h3.innerHTML = restaurantHash.name
         h5.innerHTML = "Description: <br>" + restaurantHash.description
         h6.innerHTML = "Review: <br>" + restaurantHash.review
-        // p.innerHTML = restaurantHash.category.group
-        p.innerHTML = restaurantHash.category_id
+        p.innerHTML = restaurantHash.category.group
     
         //stretch goal: create list to save restaurants
         button.setAttribute("data-restaurant-id", restaurantHash.id)
@@ -47,32 +46,21 @@ class Restaurant {
     }
 
     static addRestaurantsToDOM() {
-        const restaurantList = document.querySelector("#restaurant-container")
-        restaurantList.innerHTML = ""
+        // const restaurantList = document.querySelector("#restaurant-container")
+        // restaurantList.innerHTML = ""
 
-        const selectName = document.querySelector("#name").value
-        const selectDescription = document.querySelector("#description").value 
-        const selectReview = document.querySelector("#review").value 
-        const selectCategory = document.querySelector("#category").value 
-    
-        // Restaurant.all.forEach(
-        //     const newRest = new Restaurant(this)
-        //     renderRestaurant(newRest)
-        //     // renderRestaurant(htmlifyRestaurant(rest))
-        //     selectName.innerHTML += `<option value=${this.id}>${this.name}</option>`
-        //     selectDescription.innerHTML += `<option value=${this.id}>${this.description}</option>`
-        //     selectReview.innerHTML += `<option value=${this.id}>${this.review}</option>`
-        //     selectCategory.innerHTML += `<option value=${this.category.id}>${this.category.group}</option>`
-        // )
+        // let selectName = document.querySelector("#name")
+        // let selectDescription = document.querySelector("#description")
+        // let selectReview = document.querySelector("#review")
+        // let selectCategory = document.querySelector("#category") 
+
+        // selectName = ""
+        // selectDescription = ""
+        // selectReview = ""
+        // selectCategory = ""
 
         Restaurant.all.forEach(function(rest) {
-        // renderRestaurant(htmlifyRestaurant(rest))
-
-        Restaurant.renderRestaurant(rest)
-        selectName.innerHTML += `<option value=${rest.id}>${rest.name}</option>`
-        selectDescription.innerHTML += `<option value=${rest.id}>${rest.description}</option>`
-        selectReview.innerHTML += `<option value=${rest.id}>${rest.review}</option>`
-        selectCategory.innerHTML += `<option value=${rest.category.id}>${rest.category.group}</option>`
+            Restaurant.renderRestaurant(rest)
         })
     }
 
@@ -98,21 +86,21 @@ class Restaurant {
         })
     }
 
-    static getRestaurantData(event) { 
-        return {
-            name: event.target.querySelector("#name").value,
-            description: event.target.querySelector("#description").value,
-            review: event.target.querySelector("#review").value,
-            category_id: event.target.querySelector("#category").value
-        }
-    }
+    // static getRestaurantData(event) { 
+    //     return {
+    //         name: event.target.querySelector("#name").value,
+    //         description: event.target.querySelector("#description").value,
+    //         review: event.target.querySelector("#review").value,
+    //         category_id: event.target.querySelector("#category").value
+    //     }
+    // }
 
-    static clearRestForm(event) {
-        event.target.querySelector("#name").value = ""
-        event.target.querySelector("#description").value = ""
-        event.target.querySelector("#review").value = ""
-        event.target.querySelector("#category").value = "4"
-    }
+    // static clearRestForm(event) {
+    //     event.target.querySelector("#name").value = ""
+    //     event.target.querySelector("#description").value = ""
+    //     event.target.querySelector("#review").value = ""
+    //     event.target.querySelector("#category").value = "4"
+    // }
 
     static restaurantFormListener() {
         // const restaurantsUrl = "http://localhost:3000/restaurants"
@@ -136,9 +124,16 @@ class Restaurant {
                 // renderRestaurant(htmlRest)
     
                 Restaurant.loadRestaurants(json)
-                // clearRestForm(event)        
+                clearRestForm(event)        
             })
         })
     }
 
+}
+
+function clearRestForm(event) {
+    event.target.querySelector("#name").value = ""
+    event.target.querySelector("#description").value = ""
+    event.target.querySelector("#review").value = ""
+    event.target.querySelector("#category").value = `${Category.all.sort_by |c| c.group}` 
 }
