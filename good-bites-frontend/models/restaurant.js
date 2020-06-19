@@ -1,5 +1,5 @@
 class Restaurant {
-    static restaurantsUrl = "http://localhost:3000/restaurants"
+    // static restaurantsUrl = "http://localhost:3000/restaurants"
 
     static all = []
 
@@ -28,8 +28,10 @@ class Restaurant {
         h3.innerHTML = restaurantHash.name
         h5.innerHTML = "Description: <br>" + restaurantHash.description
         h6.innerHTML = "Review: <br>" + restaurantHash.review
-        p.innerHTML = restaurantHash.category.group
+        // p.innerHTML = restaurantHash.category.group
+        p.innerHTML = restaurantHash.category_id
     
+        //stretch goal: create list to save restaurants
         button.setAttribute("data-restaurant-id", restaurantHash.id)
         button.innerHTML = "Save Restaurant"
         // button.addEventListener("click", saveRestaurant)
@@ -44,21 +46,33 @@ class Restaurant {
         main.appendChild(div)
     }
 
-    static addRestaurantsToDOM(restaurants) {
+    static addRestaurantsToDOM() {
         const restaurantList = document.querySelector("#restaurant-container")
         restaurantList.innerHTML = ""
-        const selectName = document.querySelector("#name").value 
+
+        const selectName = document.querySelector("#name").value
         const selectDescription = document.querySelector("#description").value 
         const selectReview = document.querySelector("#review").value 
         const selectCategory = document.querySelector("#category").value 
     
-        restaurants.forEach(function(rest) {
-            // renderRestaurant(htmlifyRestaurant(rest))
-            renderRestaurant(rest)
-            selectName.innerHTML += `<option value=${rest.id}>${rest.name}</option>`
-            selectDescription.innerHTML += `<option value=${rest.id}>${rest.description}</option>`
-            selectReview.innerHTML += `<option value=${rest.id}>${rest.review}</option>`
-            selectCategory.innerHTML += `<option value=${rest.category.id}>${rest.category.group}</option>`
+        // Restaurant.all.forEach(
+        //     const newRest = new Restaurant(this)
+        //     renderRestaurant(newRest)
+        //     // renderRestaurant(htmlifyRestaurant(rest))
+        //     selectName.innerHTML += `<option value=${this.id}>${this.name}</option>`
+        //     selectDescription.innerHTML += `<option value=${this.id}>${this.description}</option>`
+        //     selectReview.innerHTML += `<option value=${this.id}>${this.review}</option>`
+        //     selectCategory.innerHTML += `<option value=${this.category.id}>${this.category.group}</option>`
+        // )
+
+        Restaurant.all.forEach(function(rest) {
+        // renderRestaurant(htmlifyRestaurant(rest))
+
+        Restaurant.renderRestaurant(rest)
+        selectName.innerHTML += `<option value=${rest.id}>${rest.name}</option>`
+        selectDescription.innerHTML += `<option value=${rest.id}>${rest.description}</option>`
+        selectReview.innerHTML += `<option value=${rest.id}>${rest.review}</option>`
+        selectCategory.innerHTML += `<option value=${rest.category.id}>${rest.category.group}</option>`
         })
     }
 
@@ -66,22 +80,25 @@ class Restaurant {
         const allRestaurants = document.getElementById("all-restaurants");
         allRestaurants.addEventListener("click", function(event) {
             event.preventDefault()
-            loadRestaurants()
+            Restaurant.loadRestaurants()
         })
     }
 
-    loadRestaurants = () => {
-        fetch(restaurantsUrl)
+    static loadRestaurants() {
+        // const restaurantsUrl = "http://localhost:3000/restaurants"
+        fetch(RESTAURANTS_URL)
         .then(res => res.json())
-        // .then(json => {
-        //     json.forEach(restaurant => renderRestaurant(restaurant))
-        // })
+        .then(json => {
+            json.forEach(data => new Restaurant(data))
+            // debugger 
+
+        })
         .then(data => {
-            addRestaurantsToDOM(data)
+            Restaurant.addRestaurantsToDOM(data)
         })
     }
 
-    getRestaurantData(event) { 
+    static getRestaurantData(event) { 
         return {
             name: event.target.querySelector("#name").value,
             description: event.target.querySelector("#description").value,
@@ -90,7 +107,7 @@ class Restaurant {
         }
     }
 
-    clearRestForm(event) {
+    static clearRestForm(event) {
         event.target.querySelector("#name").value = ""
         event.target.querySelector("#description").value = ""
         event.target.querySelector("#review").value = ""
@@ -98,12 +115,14 @@ class Restaurant {
     }
 
     static restaurantFormListener() {
+        // const restaurantsUrl = "http://localhost:3000/restaurants"
         const restaurantForm = document.getElementById("restaurant-form-container")
         restaurantForm.addEventListener("submit", function(event) {
             event.preventDefault()
-            const restaurantObject = getRestaurantData(event)
+            const restaurantObject = Restaurant.getRestaurantData(event)
+            // Restaurant.clearRestForm()
     
-            fetch(restaurantsUrl, {
+            fetch(RESTAURANTS_URL, {
                 method: 'POST', 
                 headers: {
                     'Content-Type': 'application/json'
@@ -112,12 +131,12 @@ class Restaurant {
                 // body data type must match "Content-Type" header
             })
             .then(res => res.json())
-            .then((data) => {
+            .then((json) => {
                 // const htmlRest = htmlifyRestaurant(data)
                 // renderRestaurant(htmlRest)
     
-                loadRestaurants()
-                clearRestForm(event)        
+                Restaurant.loadRestaurants(json)
+                // clearRestForm(event)        
             })
         })
     }

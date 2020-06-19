@@ -3,36 +3,20 @@ const CATEGORIES_URL = `${BASE_URL}/categories`
 const RESTAURANTS_URL = `${BASE_URL}/restaurants`
 // const RESTAURANT_URL = `${BASE_URL}/restaurants/${this.id}`
 
-// const main = document.querySelector("main")
-
 document.addEventListener("DOMContentLoaded", function() {
     Category.loadCategories()
-    
-    // loadRestaurants()
-    Restaurant.restaurantsClickListener()
+    Category.categoryFormListener()
+    //stretch goal: add on click to each category name
     // categoriesClickListener()
 
-    Category.categoryFormListener()
-    // categoryFormListener()
+    Restaurant.restaurantsClickListener()
+    // restaurantsClickListener()
     Restaurant.restaurantFormListener()
+    // restaurantFormListener()
 })
 
-// const categoryList = document.querySelector("#category-list-container")
-// const selectCategory = document.querySelector("#category")
 // const restaurantList = document.querySelector("#restaurant-container")
 
-//ORIGINAL CODE******
-// function addCategoriesToDOM(categories) {
-//     categoryList.innerHTML = ""
-//     selectCategory.innerHTML = ""
-
-//     categories.forEach(function(cat) {
-//         renderCategory(htmlifyCategory(cat))
-//         selectCategory.innerHTML += `<option value=${cat.id}>${cat.group}</option>`
-//     })
-// }
-
-//ORIGINAL CODE
 // function addRestaurantsToDOM(restaurants) {
 //     restaurantList.innerHTML = ""
 //     const selectName = document.querySelector("#name").value 
@@ -50,30 +34,6 @@ document.addEventListener("DOMContentLoaded", function() {
 //     })
 // }
 
-//ORIGINAL CODE******
-// const loadCategories = () => {
-//     fetch(CATEGORIES_URL)
-//     .then(res => res.json())
-//     // .then(json => {
-//     //     json.forEach(category => getCategoryData(category))
-//     // })
-//     .then(data => {
-//         addCategoriesToDOM(data)
-//     })
-// }
-
-// NOT CURRENTLY WORKING
-// function categoriesClickListener() {
-//     const allCategories = document.querySelectorAll(".card-group");
-//     allCategories.forEach(function(cat){
-//         cat.addEventListener("click", function(event) {
-//             event.preventDefault()
-//             // loadCategoryRestaurants()
-//         })
-//     }) 
-// }
-
-//ORIGINAL CODE
 // function restaurantsClickListener() {
 //     const allRestaurants = document.getElementById("all-restaurants");
 //     allRestaurants.addEventListener("click", function(event) {
@@ -82,7 +42,6 @@ document.addEventListener("DOMContentLoaded", function() {
 //     })
 // }
 
-//ORIGINAL CODE
 // const loadRestaurants = () => {
 //     fetch(RESTAURANTS_URL)
 //     .then(res => res.json())
@@ -94,21 +53,17 @@ document.addEventListener("DOMContentLoaded", function() {
 //     })
 // }
 
-// const loadRestaurant = () => {
-//     fetch (RESTAURANT_URL)
-//     .then(res => res.json())
-//     .then(data => {
+// //stretch goal: add feature to view single restaurant
+// // const loadRestaurant = () => {
+// //     fetch (RESTAURANT_URL)
+// //     .then(res => res.json())
+// //     .then(data => {
+// //     })
+// // }
 
-//     })
-// }
-
-//ORIGINAL CODE******
-// function renderCategory(category) {
-//     categoryList.innerHTML += category
-// }
-
-//ORIGINAL CODE
 // const renderRestaurant = (restaurantHash) => {
+//     const main = document.querySelector("main")
+
 //     const div = document.createElement("div")
 //     const h3 = document.createElement("h3")
 //     const h5 = document.createElement("h5")
@@ -124,6 +79,7 @@ document.addEventListener("DOMContentLoaded", function() {
 //     h6.innerHTML = "Review: <br>" + restaurantHash.review
 //     p.innerHTML = restaurantHash.category.group
 
+//     //stretch goal: create list to save restaurants
 //     button.setAttribute("data-restaurant-id", restaurantHash.id)
 //     button.innerHTML = "Save Restaurant"
 //     // button.addEventListener("click", saveRestaurant)
@@ -138,22 +94,6 @@ document.addEventListener("DOMContentLoaded", function() {
 //     main.appendChild(div)
 // }
 
-//ORIGINAL CODE******
-// function getCategoryData(event) {
-//     return {
-//         group: event.target.querySelector("#group").value
-//     }
-// }
-
-//ORIGINAL CODE******
-// const htmlifyCategory = function(cat) {
-//     return (`
-//             <span class="card-group">${cat.group}</span>
-//             <br>
-//     `)
-// }
-
-//ORIGINAL CODE
 // function getRestaurantData(event) { 
 //     return {
 //         name: event.target.querySelector("#name").value,
@@ -163,27 +103,20 @@ document.addEventListener("DOMContentLoaded", function() {
 //     }
 // }
 
-// const htmlifyRestaurant = function(rest) {
-//     return (`
-//         <div class="list">
-//             <div class="list-content">
-//                 <span class="list-name">${rest.name}</span>
-//                 <span class="list-name">${rest.description}</span>
-//                 <span class="list-name">${rest.review}</span>
-//                 <span class="list-name">${rest.category.group}</span>
-//             </div>
-//         </div>
-//     `
-//     )
-// }
+// // const htmlifyRestaurant = function(rest) {
+// //     return (`
+// //         <div class="list">
+// //             <div class="list-content">
+// //                 <span class="list-name">${rest.name}</span>
+// //                 <span class="list-name">${rest.description}</span>
+// //                 <span class="list-name">${rest.review}</span>
+// //                 <span class="list-name">${rest.category.group}</span>
+// //             </div>
+// //         </div>
+// //     `
+// //     )
+// // }
 
-
-//ORIGINAL CODE******
-// function clearCatForm(event) {
-//     event.target.querySelector("#group").value = ""
-// }
-
-//ORIGINAL CODE
 // function clearRestForm(event) {
 //     event.target.querySelector("#name").value = ""
 //     event.target.querySelector("#description").value = ""
@@ -191,32 +124,6 @@ document.addEventListener("DOMContentLoaded", function() {
 //     event.target.querySelector("#category").value = "4"
 // }
 
-//ORIGINAL CODE******
-// function categoryFormListener() {
-//     const categoryForm = document.getElementById("category-form-container")
-//     categoryForm.addEventListener("submit", function(event) {
-//         event.preventDefault()
-//         const categoryObject = getCategoryData(event)
-
-//         fetch(CATEGORIES_URL, {
-//             method: 'POST', 
-//             headers: {
-//                 'Content-Type': 'application/json'
-//             },
-//             body: JSON.stringify({category:categoryObject}) 
-//             // body data type must match "Content-Type" header
-//         })
-//         .then(res => res.json())
-//         .then((data) => {
-//             // const htmlCat = htmlifyCategory(data)
-//             // renderCategory(htmlCat)
-//             loadCategories()
-//             clearCatForm(event)        
-//         })
-//     })
-// }
-
-//ORIGINAL CODE 
 // function restaurantFormListener() {
 //     const restaurantForm = document.getElementById("restaurant-form-container")
 //     restaurantForm.addEventListener("submit", function(event) {
