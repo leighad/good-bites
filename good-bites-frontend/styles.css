@@ -83,6 +83,13 @@ span.create-category-info {
     font-size: 1.45em;
 }
 
+.category-p-tag {
+    font-size: 1em;
+    font-style: normal;
+    font-weight: normal;
+    margin: 0;
+}
+
 h3, h4, h5 {
     font-weight: normal;
 }
