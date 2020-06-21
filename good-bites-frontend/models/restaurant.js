@@ -2,13 +2,13 @@ class Restaurant {
     // static restaurantsUrl = "http://localhost:3000/restaurants"
     static all = []
 
-    constructor({id, name, description, review, category_id, category}) {
-        this.id = id;
-        this.name = name;
-        this.description = description;
-        this.review = review;
-        this.category_id = category_id;
-        this.category = category;
+    constructor(obj) {
+        this.id = obj.id;
+        this.name = obj.name;
+        this.description = obj.description;
+        this.review = obj.review;
+        this.categoryId = obj.category_id;
+        this.category = obj.category;
         Restaurant.all.push(this)
     }
 
@@ -21,7 +21,7 @@ class Restaurant {
         const h6 = document.createElement("h6")
         const p = document.createElement("p")
         const button = document.createElement("button")
-    // debugger
+
         // div.setAttribute("id", "restaurant-container")
         div.setAttribute("data-id", restaurantHash.id)
     
@@ -74,33 +74,32 @@ class Restaurant {
 
     static loadRestaurants() {
         // const restaurantsUrl = "http://localhost:3000/restaurants"
+
         fetch(RESTAURANTS_URL)
         .then(res => res.json())
         .then(json => {
             json.forEach(data => new Restaurant(data))
-            // debugger 
-
         })
         .then(data => {
             Restaurant.addRestaurantsToDOM(data)
         })
     }
 
-    // static getRestaurantData(event) { 
-    //     return {
-    //         name: event.target.querySelector("#name").value,
-    //         description: event.target.querySelector("#description").value,
-    //         review: event.target.querySelector("#review").value,
-    //         category_id: event.target.querySelector("#category").value
-    //     }
-    // }
+    static getRestaurantData(event) { 
+        return {
+            name: event.target.querySelector("#name").value,
+            description: event.target.querySelector("#description").value,
+            review: event.target.querySelector("#review").value,
+            category_id: event.target.querySelector("#category").value
+        }
+    }
 
-    // static clearRestForm(event) {
-    //     event.target.querySelector("#name").value = ""
-    //     event.target.querySelector("#description").value = ""
-    //     event.target.querySelector("#review").value = ""
-    //     event.target.querySelector("#category").value = "4"
-    // }
+    static clearRestForm(event) {
+        event.target.querySelector("#name").value = ""
+        event.target.querySelector("#description").value = ""
+        event.target.querySelector("#review").value = ""
+        event.target.querySelector("#category").value = "4"
+    }
 
     static restaurantFormListener() {
         // const restaurantsUrl = "http://localhost:3000/restaurants"
@@ -120,20 +119,21 @@ class Restaurant {
             })
             .then(res => res.json())
             .then((json) => {
-                // const htmlRest = htmlifyRestaurant(data)
-                // renderRestaurant(htmlRest)
-    
-                Restaurant.loadRestaurants(json)
-                clearRestForm(event)        
+
+                Restaurant.renderRestaurant(json)
+                Restaurant.addRestaurantsToDOM(json)
+
+                // Restaurant.loadRestaurants()
+                Restaurant.clearRestForm(event)        
             })
         })
     }
 
 }
 
-function clearRestForm(event) {
-    event.target.querySelector("#name").value = ""
-    event.target.querySelector("#description").value = ""
-    event.target.querySelector("#review").value = ""
-    event.target.querySelector("#category").value = `${Category.all.sort_by |c| c.group}` 
-}
+// function clearRestForm(event) {
+//     event.target.querySelector("#name").value = ""
+//     event.target.querySelector("#description").value = ""
+//     event.target.querySelector("#review").value = ""
+//     event.target.querySelector("#category").value = `${Category.all.sort_by |c| c.group}` 
+// }
