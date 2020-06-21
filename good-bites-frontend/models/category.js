@@ -23,7 +23,7 @@ class Category {
     }
 
     static loadCategories() {
-        API.get()
+        API.get("/categories")
         .then(cats => {
             cats.forEach(cat => new Category(cat))
         })
