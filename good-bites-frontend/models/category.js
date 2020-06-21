@@ -17,7 +17,7 @@ class Category {
         selectCategory.innerHTML = ""
     
         Category.all.forEach(function(cat) {
-            categoryList.innerHTML += `${cat.group}<br>` 
+            categoryList.innerHTML += `<p class="category-p-tag" data-id="${cat.id}">${cat.group}</p>` 
             selectCategory.innerHTML += `<option value=${cat.id}>${cat.group}</option>`
         })
     }
