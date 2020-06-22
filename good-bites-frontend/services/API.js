@@ -9,21 +9,12 @@ class API {
         }
     }
 
-    // constructor() {
-    //     this.baseURL = "http://localhost:3000"
-    // }
-
     static get(url) {
-        return fetch(this.baseURL + url)
+        return (
+            fetch(this.baseURL + url)
             .then(resp => resp.json())
+        )
     }
-
-    // static get() {
-    //     return (
-    //         fetch(this.baseUrl)
-    //         .then(resp => resp.json())
-    //     )
-    // }
 
     static post(data) {
         const options = {
@@ -35,7 +26,6 @@ class API {
         fetch(API.baseUrl, options)
         .then(resp => resp.json())
 
-        //refactor here
         .then((data) => {
             if (!data.errors) {
                 new Category(data)

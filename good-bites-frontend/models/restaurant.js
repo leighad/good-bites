@@ -1,5 +1,4 @@
 class Restaurant {
-    // static restaurantsUrl = "http://localhost:3000/restaurants"
     static all = []
 
     constructor(obj) {
@@ -46,19 +45,6 @@ class Restaurant {
     }
 
     static addRestaurantsToDOM() {
-        // const restaurantList = document.querySelector("#restaurant-container")
-        // restaurantList.innerHTML = ""
-
-        // let selectName = document.querySelector("#name")
-        // let selectDescription = document.querySelector("#description")
-        // let selectReview = document.querySelector("#review")
-        // let selectCategory = document.querySelector("#category") 
-
-        // selectName = ""
-        // selectDescription = ""
-        // selectReview = ""
-        // selectCategory = ""
-
         Restaurant.all.forEach(function(rest) {
             Restaurant.renderRestaurant(rest)
         })
@@ -73,10 +59,7 @@ class Restaurant {
     }
 
     static loadRestaurants() {
-        // const restaurantsUrl = "http://localhost:3000/restaurants"
-
-        fetch(RESTAURANTS_URL)
-        .then(res => res.json())
+        API.get("/restaurants")
         .then(json => {
             json.forEach(data => new Restaurant(data))
         })
@@ -102,7 +85,6 @@ class Restaurant {
     }
 
     static restaurantFormListener() {
-        // const restaurantsUrl = "http://localhost:3000/restaurants"
         const restaurantForm = document.getElementById("restaurant-form-container")
         restaurantForm.addEventListener("submit", function(event) {
             event.preventDefault()
@@ -130,10 +112,3 @@ class Restaurant {
     }
 
 }
-
-// function clearRestForm(event) {
-//     event.target.querySelector("#name").value = ""
-//     event.target.querySelector("#description").value = ""
-//     event.target.querySelector("#review").value = ""
-//     event.target.querySelector("#category").value = `${Category.all.sort_by |c| c.group}` 
-// }
