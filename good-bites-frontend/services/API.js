@@ -1,6 +1,6 @@
 class API {
     static baseURL = "http://localhost:3000"
-    static baseUrl = "http://localhost:3000/categories"
+    static catUrl = "http://localhost:3000/categories"
 
     static options = {
         headers: {
@@ -23,7 +23,7 @@ class API {
             body: JSON.stringify({category:data})
         }
 
-        fetch(API.baseUrl, options)
+        fetch(API.catUrl, options)
         .then(resp => resp.json())
 
         .then((data) => {
