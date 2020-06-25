@@ -40,7 +40,6 @@ class Restaurant {
         div.appendChild(p)
         div.appendChild(button)
         restaurantList.appendChild(div)
-    
         main.appendChild(div)
     }
 
@@ -59,6 +58,9 @@ class Restaurant {
     }
 
     static loadRestaurants() {
+        const restaurantList = document.querySelector("#restaurant-container")
+        restaurantList.innerHTML = ""
+
         fetch(RESTAURANTS_URL)
         .then(resp => resp.json())
         // API.get("/restaurants")
@@ -77,7 +79,7 @@ class Restaurant {
         }
     }
 
-    static clearRestForm(event) {
+    clearRestForm(event) {
         event.target.querySelector("#name").value = ""
         event.target.querySelector("#description").value = ""
         event.target.querySelector("#review").value = ""
@@ -89,6 +91,7 @@ class Restaurant {
         restaurantForm.addEventListener("submit", function(event) {
             event.preventDefault()
             const restaurantObject = Restaurant.getRestaurantData(event)
+            //how to clear            
             // Restaurant.clearRestForm()
     
             fetch(RESTAURANTS_URL, {
@@ -101,12 +104,12 @@ class Restaurant {
             })
             .then(res => res.json())
             .then((json) => {
-                new Restaurant(json)
+                const newRest = new Restaurant(json)
 
-                Restaurant.addRestaurantsToDOM(json)
+                Restaurant.renderRestaurant(json)
 
                 // Restaurant.loadRestaurants()
-                Restaurant.clearRestForm(event)        
+                newRest.clearRestForm(event)        
             })
         })
     }
