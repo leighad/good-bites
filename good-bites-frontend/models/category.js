@@ -23,12 +23,12 @@ class Category {
     }
 
     static loadCategories() {
-        API.get("/categories")
-        .then(cats => {
-            cats.forEach(cat => new Category(cat))
-        })
+        fetch(CATEGORIES_URL)
+        .then(resp => resp.json())
+        // API.get("/categories")
         .then(data => {
-            Category.addCategoriesToDOM(data)
+            data.forEach(cat => new Category(cat))
+            Category.addCategoriesToDOM()
         })
     }
 
@@ -63,13 +63,11 @@ class Category {
             .then((json) => {
                 // const categoryList = document.querySelector("#category-list-container")
                 // categoryList.innerText = ""
-                Category.all.push(json)
-                // categoryList.innerHTML += json.group
-                // Category.loadCategories(json)
 
+                // Category.all.push(json)
+                new Category(json)
                 Category.addCategoriesToDOM(json)
                 // Category.renderCategory(json)
-                // Category.loadCategories(json)
             })
         })
     }

@@ -59,17 +59,13 @@ class Restaurant {
     }
 
     static loadRestaurants() {
-        API.get("/restaurants")
-        // .then(json => {
-        //     json.forEach(data => new Restaurant(data))
-        // })
+        fetch(RESTAURANTS_URL)
+        .then(resp => resp.json())
+        // API.get("/restaurants")
         .then(data => {
             data.forEach(rest => new Restaurant(rest))
             Restaurant.addRestaurantsToDOM()
         })
-        // .then(data => {
-        //     Restaurant.addRestaurantsToDOM(data)
-        // })
     }
 
     static getRestaurantData(event) { 
@@ -105,8 +101,8 @@ class Restaurant {
             })
             .then(res => res.json())
             .then((json) => {
+                new Restaurant(json)
 
-                Restaurant.renderRestaurant(json)
                 Restaurant.addRestaurantsToDOM(json)
 
                 // Restaurant.loadRestaurants()

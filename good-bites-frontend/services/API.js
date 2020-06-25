@@ -1,3 +1,5 @@
+//stretch goal:
+//complete API functionality
 class API {
     static baseURL = "http://localhost:3000"
     static catUrl = "http://localhost:3000/categories"
