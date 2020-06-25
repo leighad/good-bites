@@ -6,7 +6,6 @@ class Category {
         this.group = obj.group;
         this.restaurants = obj.restaurants;
         Category.all.push(this)
-
     }
 
     static addCategoriesToDOM() {
@@ -56,20 +55,15 @@ class Category {
                     'Content-Type': 'application/json'
                 },
                 body: JSON.stringify({category:categoryObject}) 
-                // body data type must match "Content-Type" header
             })
             .then(res => res.json())
-
             .then((json) => {
                 // const categoryList = document.querySelector("#category-list-container")
                 // categoryList.innerText = ""
-
-                // Category.all.push(json)
                 new Category(json)
-                Category.addCategoriesToDOM(json)
+                Category.addCategoriesToDOM()
                 // Category.renderCategory(json)
             })
         })
-    }
-    
+    }   
 }
