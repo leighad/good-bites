@@ -60,12 +60,16 @@ class Restaurant {
 
     static loadRestaurants() {
         API.get("/restaurants")
-        .then(json => {
-            json.forEach(data => new Restaurant(data))
-        })
+        // .then(json => {
+        //     json.forEach(data => new Restaurant(data))
+        // })
         .then(data => {
-            Restaurant.addRestaurantsToDOM(data)
+            data.forEach(rest => new Restaurant(rest))
+            Restaurant.addRestaurantsToDOM()
         })
+        // .then(data => {
+        //     Restaurant.addRestaurantsToDOM(data)
+        // })
     }
 
     static getRestaurantData(event) { 
